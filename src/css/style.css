@@ -43,6 +43,26 @@
   --shadow: 0 2px 10px rgba(95, 95, 95, 0.2);
 }
 
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #bec4c4;
+    border-radius:5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
 html {
   font-size: 100%;
   scroll-behavior: smooth;
@@ -133,8 +153,8 @@ body {
   background-color: var(--bg-secondary);
 }
 
-/* Hero section */
-#hero {
+/* Intro section */
+#intro {
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -247,6 +267,10 @@ body {
   font-size: 0.8rem;
 }
 
+.lh-2 {
+    line-height: 1.5;
+}
+
 /* Responsiveness */
 
 @media (max-width: 1000px) {
@@ -332,3 +356,4 @@ body {
     width: 80%;
   }
 }
+

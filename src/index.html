@@ -1,297 +1,926 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
+<html lang="en" id="top">
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Primary Meta Tags -->
-    <title>Portfolio Template - Open source</title>
-    <meta name="title" content="Portfolio Template - Open source" />
-    <meta
-      name="description"
-      content="Build or customize your portfolio website using this super easy template. Free to use if you are a member of the community or a contributor to this project"
-    />
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta
-      property="og:url"
-      content="https://github.com/CommunityPro/portfolio-html"
-    />
-    <meta property="og:title" content="Portfolio Template - Open source" />
-    <meta
-      property="og:description"
-      content="Build or customize your portfolio website using this super easy template. Free to use if you are a member of the community or a contributor to this project"
-    />
-    <meta
-      property="og:image"
-      content="https://user-images.githubusercontent.com/62628408/150613011-b78a7f5a-0af1-4312-aab0-0022e7258693.png"
-    />
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta
-      property="twitter:url"
-      content="https://github.com/CommunityPro/portfolio-html"
-    />
-    <meta property="twitter:title" content="Portfolio Template - Open source" />
-    <meta
-      property="twitter:description"
-      content="Build or customize your portfolio website using this super easy template. Free to use if you are a member of the community or a contributor to this project"
-    />
-    <meta
-      property="twitter:image"
-      content="https://user-images.githubusercontent.com/62628408/150613011-b78a7f5a-0af1-4312-aab0-0022e7258693.png"
-    />
+    <title>Portfolio de Yohan Pradeau</title>
+    <meta name="title" content="Portfolio de Yohan Pradeau" />
+    <meta name="description"
+          content="Build or customize your portfolio website using this super easy template. Free to use if you are a member of the community or a contributor to this project" />
 
     <!-- Link -->
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="assets/favicon/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="/assets/favicon/favicon-16x16.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="assets/favicon/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="192x192"
-      href="assets/favicon/android-chrome-192x192.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="512x512"
-      href="assets/favicon/android-chrome-512x512.png"
-    />
+    <link rel="apple-touch-icon"
+          sizes="180x180"
+          href="assets/favicon/apple-touch-icon.png" />
+    <link rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/assets/favicon/favicon-16x16.png" />
+    <link rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="assets/favicon/favicon-32x32.png" />
+    <link rel="icon"
+          type="image/png"
+          sizes="192x192"
+          href="assets/favicon/android-chrome-192x192.png" />
+    <link rel="icon"
+          type="image/png"
+          sizes="512x512"
+          href="assets/favicon/android-chrome-512x512.png" />
     <link rel="icon" type="image/x-icon" href="assets/favicon/favicon.ico" />
     <link rel="manifest" href="assets/favicon/site.webmanifest" />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
-      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
-      crossorigin="anonymous"
-    />
+    <link rel="stylesheet"
+          href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+          integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+          crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/modal.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/utilities.css" />
-  </head>
-  <body>
-    <header id="hero">
-      <!-- Navbar -->
-      <nav class="navbar">
-        <div class="container">
-          <!-- Logo -->
-          <h1 id="logo">
-            <a href="https://github.com/CommunityPro/portfolio-html"
-              ><img src="./assets/logo.png" alt="Your Logo"
-            /></a>
-          </h1>
-          <!-- Navbar links -->
-          <ul class="nav-menu">
-            <li><a class="nav-link" href="#projects">PROJECTS</a></li>
-            <li><a class="nav-link" href="#">CONTACT</a></li>
-            <li><a class="nav-link" href="#">BlOG</a></li>
-            <li>
-              <a
-                class="nav-link btn btn-primary"
-                href="https://github.com/CommunityPro/portfolio-html"
-                >RESUME <i class="fas fa-arrow-right"></i
-              ></a>
-            </li>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-3.4.1.slim.js"></script>
+</head>
+<body>
+    <header id="intro">
+        <!-- Navbar -->
+        <nav class="navbar">
+            <div class="container">
+                <!-- Logo -->
+                <h1 id="logo">
+                    <a href="#">
+                        <img src="./assets/logo.png" alt="Your Logo" />
+                    </a>
+                </h1>
+                <!-- Navbar links -->
+                <ul class="nav-menu">
+                    <li><a class="nav-link" href="#projects">REALISATIONS</a></li>
+                    <li><a class="nav-link" href="#techno">TECHNOLOGIES</a></li>
+                    <li><a class="nav-link" href="#skills">COMPETENCES</a></li>
+                    <li>
+                        <a class="nav-link btn btn-primary"
+                           href=".\assets\cv\cv_YohanPRADEAU.pdf">
+                            MON CV <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </li>
 
-            <!-- Toggle switch -->
-            <div class="theme-switch">
-              <input type="checkbox" id="switch" />
-              <label class="toggle-icons" for="switch">
-                <img class="moon" src="assets/moon.svg" />
-                <img class="sun" src="assets/sun.svg" />
-              </label>
+                    <!-- Toggle switch -->
+                    <div class="theme-switch">
+                        <input type="checkbox" id="switch" />
+                        <label class="toggle-icons" for="switch">
+                            <img class="moon" src="assets/moon.svg" />
+                            <img class="sun" src="assets/sun.svg" />
+                        </label>
+                    </div>
+                </ul>
+
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
             </div>
-            <!-- Hamburger menu -->
-          </ul>
-          <div class="hamburger">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-          </div>
-        </div>
-      </nav>
+        </nav>
 
-      <section class="header-container">
-        <img
-          class="profile-image"
-          src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8dXNlcnxlbnwwfDJ8MHx8&auto=format&fit=crop&w=400&q=60"
-          alt=""
-        />
-        <h1>Hi I'm Franklin</h1>
+        <section class="header-container">
+            <img class="profile-image"
+                 src=".\assets\main_profile.png"
+                 alt="" />
+            <div class="main-text">
+                <h1 class="first-part">Bonjour ! </h1>
+                <div class="second-part-div">
+                    <h1 class="second-part">Je suis Yohan Pradeau !</h1>
+                </div>
+            </div>
 
-        <div class="content-text">
-          <h2>Building digital</h2>
-          <h2>products, brands, and experience.</h2>
+            <div class="content-text">
+                <h1>Developpeur depuis 2018</h1>
+                <h4>JS, PHP, JAVA, PYTHON, C#, WLANGAGE</h4>
 
-          <p>
-            A Frontend Developer and Visual Designer with experience in web
-            design, brand identity and product design.
-          </p>
-        </div>
-        <a
-          href="https://github.com/CommunityPro/portfolio-html"
-          class="btn btn-secondary"
-          target="_blank"
-          >Connect With Me</a
-        >
-      </section>
+                <p class="lh-2">
+                    J'ai 24 ans, actuellement en semestre 10 à l'école INTECH en filière Ingénierie Logicielle
+                    <br>Je possède des connaissances dans de nombreux langages (JS, PHP, CSS, JAVA, C#, Python, WLangage) ainsi qu'un rythme d'apprentissage rapide.
+                    <br>Habitué de la méthodes Agile SCRUM, je travaille avec celle-ci depuis bientôt 3 ans.
+                    <br>J'ai aussi eu l'opportunité de réaliser des formations sur des outils informatique tel que Wix
+                    <br>Durant mes études, j'ai participé à la réalisation du Téléthon d'Agen 2019 en tant que trésorier.
+                </p>
+            </div>
+            <a href="mailto:yoh.pradeau@gmail.com"
+               class="btn btn-secondary"
+               target="_blank">Me contacter</a>
+        </section>
     </header>
 
-    <!-- Projects -->
+    <!-- Réal -->
     <section id="projects" class="project-container container">
-      <div class="division"></div>
-      <div class="content-text">
-        <h2>Works</h2>
-        <p>Check out some of my personal and paid projects</p>
-      </div>
-
-      <article class="project">
-        <!-- Project 1 -->
-        <div href="" class="card">
-          <div class="project-info">
-            <div class="project-bio">
-              <h3>Project One</h3>
-              <p>React, Redux, SASS</p>
-            </div>
-
-            <div class="project-link">
-              <a href="#" target="_blank"><i class="fab fa-github"></i></a>
-              <a href="#" target="_blank"><i class="fas fa-globe"></i></a>
-            </div>
-          </div>
+        <div class="division"></div>
+        <div class="content-text">
+            <h2>Réalisation</h2>
+            <p>Voici quelque projet que j'ai réalisés ou d'ont j'ais fait partie</p>
         </div>
 
-        <!-- Project 2 -->
-        <div href="" class="card">
-          <div class="project-info">
-            <div class="project-bio">
-              <h3>Project Two</h3>
-              <p>React, Redux, SASS</p>
+        <article class="project">
+            <!-- Project 1 -->
+            <div href="" class="card button animation" id="VISIOSYS">
+                <div class="project-info">
+                    <div class="project-bio">
+                        <h3>VisioSYS</h3>
+                        <p>Web, automatisme, agriculture</p>
+                        <p>JS, PHP</p>
+                    </div>
+                </div>
             </div>
 
-            <div class="project-link">
-              <a href="#" target="_blank"><i class="fab fa-github"></i></a>
-              <a href="#" target="_blank"><i class="fas fa-globe"></i></a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Porject 3 -->
-        <div href="" class="card">
-          <div class="project-info">
-            <div class="project-bio">
-              <h3>Project Three</h3>
-              <p>React, Redux, SASS</p>
+            <!-- Project 2 -->
+            <div href="" class="card button animation" id="NETSYS">
+                <div class="project-info">
+                    <div class="project-bio">
+                        <h3>NETSYS</h3>
+                        <p>Web, automatisme, agriculture</p>
+                        <p>WLangage</p>
+                    </div>
+                </div>
             </div>
 
-            <div class="project-link">
-              <a href="#" target="_blank"><i class="fab fa-github"></i></a>
-              <a href="#" target="_blank"><i class="fas fa-globe"></i></a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 4 -->
-        <div href="" class="card">
-          <div class="project-info">
-            <div class="project-bio">
-              <h3>Project Four</h3>
-              <p>React, Redux, SASS</p>
-            </div>
-
-            <div class="project-link">
-              <a href="#" target="_blank"><i class="fab fa-github"></i></a>
-              <a href="#" target="_blank"><i class="fas fa-globe"></i></a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 5 -->
-        <div href="" class="card">
-          <div class="project-info">
-            <div class="project-bio">
-              <h3>Project Five</h3>
-              <p>React, Redux, SASS</p>
+            <!-- Porject 3 -->
+            <div href="" class="card button animation" id="VSTT">
+                <div class="project-info">
+                    <div class="project-bio">
+                        <h3>Vue and Symfony Translation Tools</h3>
+                        <p>Scripts, traduction</p>
+                        <p>Python</p>
+                    </div>
+                    <div class="project-link">
+                        <a href="https://github.com/YohanPradeau/VSTT" target="_blank"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
             </div>
 
-            <div class="project-link">
-              <a href="#" target="_blank"><i class="fab fa-github"></i></a>
-              <a href="#" target="_blank"><i class="fas fa-globe"></i></a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 6 -->
-        <div href="" class="card">
-          <div class="project-info">
-            <div class="project-bio">
-              <h3>Project Six</h3>
-              <p>React, Redux, SASS</p>
+            <!-- Project 4 -->
+            <div href="" class="card button animation" id="CHECKEAT">
+                <div class="project-info">
+                    <div class="project-bio">
+                        <h3>Check Eat</h3>
+                        <p>Android, normes alimentaire</p>
+                        <p>Java</p>
+                    </div>
+                </div>
             </div>
 
-            <div class="project-link">
-              <a href="#" target="_blank"><i class="fab fa-github"></i></a>
-              <a href="#" target="_blank"><i class="fas fa-globe"></i></a>
+            <!-- Project 5 -->
+            <div href="" class="card button animation" id="UPSACALENDAR">
+                <div class="project-info">
+                    <div class="project-bio">
+                        <h3>UPSA Calendar</h3>
+                        <p>Windows, organisation</p>
+                        <p>C#</p>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-      </article>
-
-      <a href="#" class="btn btn-secondary"
-        target="_blank" >See More <i class="fas fa-arrow-right"></i
-      ></a>
+        </article>
     </section>
 
+
+    <!-- Techno -->
+    <section id="techno" class="project-container container">
+        <div class="division"></div>
+        <div class="content-text">
+            <h2>Technologies</h2>
+            <p>Quelques technologies que j'apprécie</p>
+        </div>
+
+        <article class="project">
+            <!-- Techno 1 -->
+            <div href="" class="card button animation" id="JS">
+                <div class="project-info">
+                    <div class="project-bio">
+                        <h3>JavaScript</h3>
+                        <p>Frontend WEB</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Techno 2 -->
+            <div href="" class="card button animation" id="PHP">
+                <div class="project-info">
+                    <div class="project-bio">
+                        <h3>PHP</h3>
+                        <p>Backend WEB, API</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Techno 3 -->
+            <div href="" class="card button animation" id="PY">
+                <div class="project-info">
+                    <div class="project-bio">
+                        <h3>Python</h3>
+                        <p>Backend WEB, API, Scripts</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Techno 4 -->
+            <div href="" class="card button animation" id="WL">
+                <div class="project-info">
+                    <div class="project-bio">
+                        <h3>WLangage</h3>
+                        <p>Frontend, Backend</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Techno 5 -->
+            <div href="" class="card button animation" id="JAVA">
+                <div class="project-info">
+                    <div class="project-bio">
+                        <h3>JAVA</h3>
+                        <p>Backend, API, POO</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Techno 6 -->
+            <div href="" class="card button animation" id="CS">
+                <div class="project-info">
+                    <div class="project-bio">
+                        <h3>CSHARP</h3>
+                        <p>Backend, POO</p>
+                    </div>
+                </div>
+            </div>
+
+        </article>
+    </section>
+
+    <!-- Comp -->
+    <section id="skills" class="project-container container">
+        <div class="division"></div>
+        <div class="content-text">
+            <h2>Compétences</h2>
+            <p>Mes compétences humaines, gagnées à travers diverses expériences.</p>
+        </div>
+
+        <article class="project">
+            <!-- Comp 1 -->
+            <div href="" class="card button animation" id="FORMATIONS">
+                <div class="project-info">
+                    <div class="project-bio">
+                        <h3>Formations</h3>
+                        <p>Pédagogie, écoute et compréhension des autres</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Comp 2 -->
+            <div href="" class="card button animation" id="AS">
+                <div class="project-info">
+                    <div class="project-bio">
+                        <h3>Agile - Scrum</h3>
+                        <p>Méthodologie, organisation</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Comp 3 -->
+            <div href="" class="card button animation" id="VT">
+                <div class="project-info">
+                    <div class="project-bio">
+                        <h3>Veille technologique</h3>
+                        <p>Rigueur, organisation, observation</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Comp 4 -->
+            <div href="" class="card button animation" id="EN">
+                <div class="project-info">
+                    <div class="project-bio">
+                        <h3>Anglais</h3>
+                        <p>Faculté d'apprentissage, ouverture vers le monde</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </section>
+
+
+
+
+    <!--PROJECTS-->
+
+    <div class="modal-container" id="modal-VISIOSYS">
+        <div class="modal-background">
+            <div class="modal">
+                <div class="col-1">
+                    <div class="row">
+                        <div>
+                            <h1 class="modal-title">VISIOSYS</h1>
+                            <p class="modal-text">
+
+                            </p>
+                        </div>
+                        <div>
+                            <!--<div class="modal-div-picture">
+                                <img class="modal-picture" src="./assets/project/picture-example/js.png" />
+                            </div>
+                            <p class="modal-subtitle"> Ci-dessus un example de code en javascript permettant la réalisation d'une calculette dans la console.</p>-->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <h3 class="modal-title">Formation</h3>
+                    <p class="modal-text">
+
+                    </p>
+                    <h3 class="modal-title">Réalisation</h3>
+                    <p class="modal-text">
+
+                    </p>
+                    <h3 class="modal-title">Expérience & Recul sur la compétence</h3>
+                    <p class="modal-text">
+
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div> <!--VISIOSYS -- TODO-->
+
+
+    <div class="modal-container" id="modal-NETSYS">
+        <div class="modal-background">
+            <div class="modal">
+                <div class="col-1">
+                    <div class="row">
+                        <div>
+                            <h1 class="modal-title">NETSYS</h1>
+                            <p class="modal-text">
+
+                            </p>
+                        </div>
+                        <div>
+                            <!--<div class="modal-div-picture">
+                                <img class="modal-picture" src="./assets/project/picture-example/js.png" />
+                            </div>
+                            <p class="modal-subtitle"> Ci-dessus un example de code en javascript permettant la réalisation d'une calculette dans la console.</p>-->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <h3 class="modal-title">Formation</h3>
+                    <p class="modal-text">
+
+                    </p>
+                    <h3 class="modal-title">Réalisation</h3>
+                    <p class="modal-text">
+
+                    </p>
+                    <h3 class="modal-title">Expérience & Recul sur la compétence</h3>
+                    <p class="modal-text">
+
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div> <!--NETSYS -- TODO-->
+
+
+    <div class="modal-container" id="modal-VSTT">
+        <div class="modal-background">
+            <div class="modal">
+                <div class="col-1">
+                    <div class="row">
+                        <div>
+                            <h1 class="modal-title">VSTT - Vue and Symfony Translation Tools</h1>
+                            <p class="modal-text">
+
+                            </p>
+                        </div>
+                        <div>
+                            <!--<div class="modal-div-picture">
+                                <img class="modal-picture" src="./assets/project/picture-example/js.png" />
+                            </div>
+                            <p class="modal-subtitle"> Ci-dessus un example de code en javascript permettant la réalisation d'une calculette dans la console.</p>-->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <h3 class="modal-title">Formation</h3>
+                    <p class="modal-text">
+
+                    </p>
+                    <h3 class="modal-title">Réalisation</h3>
+                    <p class="modal-text">
+
+                    </p>
+                    <h3 class="modal-title">Expérience & Recul sur la compétence</h3>
+                    <p class="modal-text">
+
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div> <!--VSTT -- TODO-->
+
+
+    <div class="modal-container" id="modal-CHECKEAT">
+        <div class="modal-background">
+            <div class="modal">
+                <div class="col-1">
+                    <div class="row">
+                        <div>
+                            <h1 class="modal-title">Check Eat</h1>
+                            <p class="modal-text">
+
+                            </p>
+                        </div>
+                        <div>
+                            <!--<div class="modal-div-picture">
+                                <img class="modal-picture" src="./assets/project/picture-example/js.png" />
+                            </div>
+                            <p class="modal-subtitle"> Ci-dessus un example de code en javascript permettant la réalisation d'une calculette dans la console.</p>-->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <h3 class="modal-title">Formation</h3>
+                    <p class="modal-text">
+
+                    </p>
+                    <h3 class="modal-title">Réalisation</h3>
+                    <p class="modal-text">
+
+                    </p>
+                    <h3 class="modal-title">Expérience & Recul sur la compétence</h3>
+                    <p class="modal-text">
+
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div> <!--CHECK EAT -- TODO-->
+
+
+    <div class="modal-container" id="modal-UPSACALENDAR">
+        <div class="modal-background">
+            <div class="modal">
+                <div class="col-1">
+                    <div class="row">
+                        <div>
+                            <h1 class="modal-title">UPSA Calendar</h1>
+                            <p class="modal-text">
+
+                            </p>
+                        </div>
+                        <div>
+                            <!--<div class="modal-div-picture">
+                                <img class="modal-picture" src="./assets/project/picture-example/js.png" />
+                            </div>
+                            <p class="modal-subtitle"> Ci-dessus un example de code en javascript permettant la réalisation d'une calculette dans la console.</p>-->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <h3 class="modal-title">Formation</h3>
+                    <p class="modal-text">
+
+                    </p>
+                    <h3 class="modal-title">Réalisation</h3>
+                    <p class="modal-text">
+
+                    </p>
+                    <h3 class="modal-title">Expérience & Recul sur la compétence</h3>
+                    <p class="modal-text">
+
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div> <!--UPSA CALENDAR -- TODO-->
+
+
+    <!--TECH-->
+
+    <div class="modal-container" id="modal-JS">
+        <div class="modal-background">
+            <div class="modal">
+                <div class="col-1">
+                    <div class="row">
+                        <div>
+                            <h1 class="modal-title">JavaScript</h1>
+                            <p class="modal-text">
+                                Le JavaScript est un langage de développement principalement côté client et disponible sur toutes les plateformes.
+                                Il est très connu dû à sa présence massive sur internet via la majorité des sites web connus (Google, Youtube, Facebook, Twitter, Reddit, et bien d’autres !).
+                                Il est souvent utilisé avec d’autres framework complémentaire (VueJS, Angular, etc) afin d’améliorer certaines facettes (VueJS, angular, React, jquery et bien d’autres).
+                                C’est un langage qui malgré son grand âge (créée en 1995) est toujours maintenue au gout du jour, que ce soit lui-même (ES2021 en juin 2021) ou bien ses framework (vue 3.2.7 en juin 2022).
+                                C’est le langage de développement le plus utilisé au monde (selon le HackerRank 2020) et aussi le langage que j’ai le plus utilisé.
+                            </p>
+                        </div>
+                        <div>
+                            <div class="modal-div-picture">
+                                <img class="modal-picture" src="./assets/tech/example/js.png" />
+                            </div>
+                            <p class="modal-subtitle"> Ci-dessus un example de code en javascript permettant la réalisation d'une calculette dans la console</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <h3 class="modal-title">Formation</h3>
+                    <p class="modal-text">
+                        C'est ma technologie la plus étudiée à ce jour (avec près de 3 ans d’expérience), et je souhaite toujours m'améliorer à ce sujet pour faire des choses encore plus poussées (gestion de 3D sur le visuel, avec affichage toujours plus poussé et immersif).
+                        J’ai commencé à l’apprendre lors de ma formation à IN’TECH et j’ai continué d’approfondir mes connaissances sur cette technologie à travers les multiples projets que j’ai réalisé, qu’ils soient scolaires ou professionnels.
+                        J’ai aussi utilisé beaucoup de modules et de framework sur cette technologie afin d’explorer celle-ci en profondeur (VueJS et Angular en framework, et une très grande quantité de module comme ChartJs, ChartKick , VueTreeSelect et bien d’autres)
+                        Il est important de noter que j'ai beaucoup travaillé en programmation orientée objet (POO) avec ce langage.
+                    </p>
+                    <h3 class="modal-title">Réalisation</h3>
+                    <p class="modal-text">
+                        C'est la technologie que j'ai le plus l'habitude d'utiliser, notamment avec son framework VueJS. C'est avec celle-ci que j’ai développé une majeure partie du visuel du projet MCUSys, par exemple pour afficher les vannes d'arrosage, il fallait pouvoir rajouter une ligne par vanne, ceci était donc réaliser avec du JavaScript et du VueJS pour adapter le visuel aux éléments.
+                        C'est aussi avec ceux-ci que j'ai réalisé des taches simples,
+                        comme l’affichage de boutons de manières conditionnels mais aussi de nombreuses taches plus difficile comme la création de multiples graphiques pour faciliter la lecture des données de l’historique ainsi que de la météo à l'utilisateur en utilisant les modules ChartJs et ChartKick,
+                        permettant l’affichage d’un graphique contenant plusieurs courbe avec chacune leurs propres axe Y, ou encore pour dessiner et afficher de manière programmable des synoptiques complexe réalisé en SVG afin d’avoir une représentation la plus exacte possible des éléments composant l’installation d’un client.
+                    </p>
+                    <h3 class="modal-title">Expérience & Recul sur la compétence</h3>
+                    <p class="modal-text">
+                        C’est une technologie que j’apprécie beaucoup dû à ses grands degrés de liberté. En effet tout est possible en JavaScript mais cela à son coût : il arrive souvent que certains aspects de celui-ci soit étrange voir confusant ! Par exemple, si l’on assigne une variable contenant un objet en utilisant une autre (ex : a = b) alors a sera une copie de b et inversement, c’est-à-dire que si l’on modifie a, cela modifiera aussi b ! Pour résoudre ce problème, il faut en fait faire Object.assign(a,b), ce qui assignera les différentes propriété de b à a sans pour autant lier les deux objets.
+                        Aussi, étant une technologie web, elle est souvent difficile à débugué (pas de débugger intégré, il faut passer par celui du navigateur qui selon les mises à jour peux ne plus marcher avec le Framework utilisé, comme c’est arrivé récemment avec Chrome/Firefox et VueJS).
+                        Dans le cadre de VueJS, je ne peux que vous conseiller l’extension pour navigateur « Vue.js devtools », permettant principalement d’afficher les variables et leurs valeurs de chaque composant visuel.
+                        Pour finir, je pense être suffisamment performant pour réaliser un site web à destination professionnel sans problème.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div> <!--JAVASCRIPT-->
+
+
+    <div class="modal-container" id="modal-PHP">
+        <div class="modal-background">
+            <div class="modal">
+                <div class="col-1">
+                    <div class="row">
+                        <div>
+                            <h1 class="modal-title">PHP</h1>
+                            <p class="modal-text">
+
+                            </p>
+                        </div>
+                        <div>
+                            <!--<div class="modal-div-picture">
+                                <img class="modal-picture" src="./assets/project/picture-example/js.png" />
+                            </div>
+                            <p class="modal-subtitle"> Ci-dessus un example de code en javascript permettant la réalisation d'une calculette dans la console.</p>-->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <h3 class="modal-title">Formation</h3>
+                    <p class="modal-text">
+
+                    </p>
+                    <h3 class="modal-title">Réalisation</h3>
+                    <p class="modal-text">
+
+                    </p>
+                    <h3 class="modal-title">Expérience & Recul sur la compétence</h3>
+                    <p class="modal-text">
+
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div> <!--PHP -- TODO-->
+
+
+    <div class="modal-container" id="modal-PY">
+        <div class="modal-background">
+            <div class="modal">
+                <div class="col-1">
+                    <div class="row">
+                        <div>
+                            <h1 class="modal-title">Python</h1>
+                            <p class="modal-text">
+
+                            </p>
+                        </div>
+                        <div>
+                            <!--<div class="modal-div-picture">
+                                <img class="modal-picture" src="./assets/project/picture-example/js.png" />
+                            </div>
+                            <p class="modal-subtitle"> Ci-dessus un example de code en javascript permettant la réalisation d'une calculette dans la console</p>-->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <h3 class="modal-title">Formation</h3>
+                    <p class="modal-text">
+
+                    </p>
+                    <h3 class="modal-title">Réalisation</h3>
+                    <p class="modal-text">
+
+                    </p>
+                    <h3 class="modal-title">Expérience & Recul sur la compétence</h3>
+                    <p class="modal-text">
+
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div> <!--PYTHON -- TODO-->
+
+
+    <div class="modal-container" id="modal-WL">
+        <div class="modal-background">
+            <div class="modal">
+                <div class="col-1">
+                    <div class="row">
+                        <div>
+                            <h1 class="modal-title">WLangage</h1>
+                            <p class="modal-text">
+                                Le WLangage est un langage propriétaire à PC soft (WinDev, WebDev, WinDev mobile). C’est un langage très atypique utilisé très majoritairement en France et en Chine.
+                                C’est un langage avec une syntaxe particulière qui a eu beaucoup de visibilité à une époque dû à un grand nombre de publicité à la télévision et sur internet.
+                                Chaque interface de développement utilisant ce langage a une particularité : il est impossible de programmer l’affichage. En effet celui-ci ce fait entièrement en visuel direct, c’est-à-dire que vous pouvez directement placer des boutons sur l’affichage en glisser déposé. Ceci peut vite poser problème pour un utilisateur débutant qui ne saurait pas gérer toutes les options de l’outil de développement.
+
+                            </p>
+                        </div>
+                        <div>
+                            <div class="modal-div-picture">
+                                <img class="modal-picture" src="./assets/tech/example/wlangage.png" />
+                            </div>
+                            <p class="modal-subtitle"> Ci-dessus un example de code en wlangage permettant de calculer un prix après une remise.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <h3 class="modal-title">Formation</h3>
+                    <p class="modal-text">
+                        N’ayant jamais utilisé cette technologie avant, je suis autodidacte. En effet j’ai appris les bases via le livre d’auto-formation fournis avec le logiciel WebDev, ainsi que de multiples sources en lignes et l’assistance de mon maitre de stage, qui avait quant à lui plus de 10 ans d’expérience avec cette technologie.
+                    </p>
+                    <h3 class="modal-title">Réalisation</h3>
+                    <p class="modal-text">
+                        Je me suis servi de ce langage avec l’interface WebDev afin de réaliser la première itération du projet MCUSys, ou j’ai donc appris la syntaxe de ce langage et comment s’en servir. L’objectif de cette première itération étant d’afficher une animation montrant la progression d’un chariot d’arrosage horticole sur une parcelle de terre ainsi qu’une gestion simple et complète de celui-ci.
+                    </p>
+                    <h3 class="modal-title">Expérience & Recul sur la compétence</h3>
+                    <p class="modal-text">
+                        Suite à ces 6 mois de travail avec cette technologie, je me considère comme étant habitué avec celle-ci, que ce soit ses particularités (la création de visuelle, la gestion long-terme du projet) ou ses basiques (syntaxe, utilisation de l’interface de développement propriétaire obligatoire) et ainsi prêt à mettre cette compétence a l’utilisation dans le cadre d’un futur emploi.
+                        Pour conclure je pense que c’est une bonne technologie dans l’ensemble cependant selon la plateforme, elle nous limite vite en terme de performance. En effet, sur navigateur avec WebDev elle a tendance à avoir une très mauvaise gestion du visuel - elle génère le visuel sous forme de tableau imbriqué entre eux - . Je conseillerai donc de prendre une autre technologie si vous souhaitez faire un programme optimisé dans ce domaine.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div> <!--WLANGAGE-->
+
+
+    <div class="modal-container" id="modal-JAVA">
+        <div class="modal-background">
+            <div class="modal">
+                <div class="col-1">
+                    <div class="row">
+                        <div>
+                            <h1 class="modal-title">Java</h1>
+                            <p class="modal-text">
+
+                            </p>
+                        </div>
+                        <div>
+                            <!--<div class="modal-div-picture">
+                                <img class="modal-picture" src="./assets/project/picture-example/js.png" />
+                            </div>
+                            <p class="modal-subtitle"> Ci-dessus un example de code en javascript permettant la réalisation d'une calculette dans la console</p>-->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <h3 class="modal-title">Formation</h3>
+                    <p class="modal-text">
+
+                    </p>
+                    <h3 class="modal-title">Réalisation</h3>
+                    <p class="modal-text">
+
+                    </p>
+                    <h3 class="modal-title">Expérience & Recul sur la compétence</h3>
+                    <p class="modal-text">
+
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div> <!--JAVA -- TODO-->
+
+
+    <div class="modal-container" id="modal-CS">
+        <div class="modal-background">
+            <div class="modal">
+                <div class="col-1">
+                    <div class="row">
+                        <div>
+                            <h1 class="modal-title">CSharp</h1>
+                            <p class="modal-text">
+
+                            </p>
+                        </div>
+                        <div>
+                            <!--<div class="modal-div-picture">
+                                <img class="modal-picture" src="./assets/project/picture-example/js.png" />
+                            </div>
+                            <p class="modal-subtitle"> Ci-dessus un example de code en javascript permettant la réalisation d'une calculette dans la console</p>-->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <h3 class="modal-title">Formation</h3>
+                    <p class="modal-text">
+
+                    </p>
+                    <h3 class="modal-title">Réalisation</h3>
+                    <p class="modal-text">
+
+                    </p>
+                    <h3 class="modal-title">Expérience & Recul sur la compétence</h3>
+                    <p class="modal-text">
+
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div> <!--CSHARP -- TODO-->
+
+
+    <!--COMP-->
+
+    <div class="modal-container" id="modal-FORMATIONS">
+        <div class="modal-background">
+            <div class="modal">
+                <div class="col-1">
+                    <div class="row">
+                        <div>
+                            <h1 class="modal-title">Formations</h1>
+                            <p class="modal-text">
+
+                                Lors de mes études, j’ai pu participer à la formation d’une poignée de jeunes à la MFR de Castelmoron-sur-Lot en les formants au e-commerce répartit sur 6 cours et voyant toutes les dimensions de ce sujet (que ce soit le vocabulaire, la théorie ou bien la pratique avec la création de site exemple via des outils comme Wix). Sujet tout particulièrement pertinent car il est de plus en plus utilisé à travers le monde par les professionnels pour vendre leurs produits (Amazon est par exemple un site très prisé pour ceci).
+
+                            </p>
+                        </div>
+                        <div>
+                            <div class="modal-div-picture">
+                                <img class="modal-picture" src="./assets/trans/example/mfr.png" />
+                            </div>
+                            <p class="modal-subtitle"> Photo de l'article de presse</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <h3 class="modal-title">Formation</h3>
+                    <p class="modal-text">
+                        Pour cette compétence j’ai dû apprendre comment donner un cours de manière intéressante et pertinente. Pour ce faire, j’ai moi-même reçu des cours lors de ma formation à In’tech sur ce sujet qui m’ont été très utile. J’ai aussi dû m’auto-former sur le e-commerce ainsi que ses nombreux termes techniques (ligne de flottaison, fil d’Ariane, etc.).
+
+                    </p>
+                    <h3 class="modal-title">Réalisation</h3>
+                    <p class="modal-text">
+                        Lors de cette formation nous avons donné cours aux élèves de la MFR de Castelmoron-sur-Lot en tant que groupe de 4 dont j’étais le chef de projet, cette classe de seconde TCVA (Technicien Conseil Vente en Alimentation) a dans son programme une section complète sur la vente en ligne et l’e-commerce. Nous avons donc vu les différentes terminologies utilisées, quelques exemples et pour finir un atelier pratique ou les élèves ont pu réaliser leurs propres sites de vente via Wix. Pour conclure nos cours nous avions réalisé une évaluation complète traitant de tous les sujets en deux parties : la première théorique, la deuxième pratique. Cette dernière avait la même consigne que l’exercice de plus tôt, avec la différence d’être noté par rapport à l’utilisation intelligente des différentes méthodes permettant d’optimiser la vente et le trafic sur le site web vue durant les cours théoriques.
+                        L’entièreté de cette formation s’est déroulée sur 4 mois et c'est terminé avec <a class="link" href="https://www.sudouest.fr/lot-et-garonne/castelmoron-sur-lot/les-eleves-de-l-intech-a-la-mfr-2738311.php" target="_blank">un article du sud-ouest</a> sur notre interaction avec la MFR de Castelmoron-sur-Lot
+                    </p>
+                    <h3 class="modal-title">Expérience & Recul sur la compétence</h3>
+                    <p class="modal-text">
+                        J’ai beaucoup appris sur cette période, notamment les différentes difficultés de l’enseignement (la pédagogie, l’écoute des élèves, les comportements difficiles, etc.). Même s’il me reste encore beaucoup à apprendre, je pense être viable comme formateur si j’ai suffisamment de temps pour préparer mon cours et mes recherches. Je souhaiterai rajouter que j’aimerai beaucoup travailler dans le domaine de l’enseignement ou de la formation plus tard.
+
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div> <!--FORMATIONS-->
+
+
+    <div class="modal-container" id="modal-AS">
+        <div class="modal-background">
+            <div class="modal">
+                <div class="col-1">
+                    <div class="row">
+                        <div>
+                            <h1 class="modal-title">Agile - Scrum</h1>
+                            <p class="modal-text">
+                                La méthode agile est une méthodologie de gestion de projet très connues et utilisé dans les entreprises. Elle consiste une approche par petite itération plutôt que tout d’un coup. Pour ce faire, le projet est découpé en petite partie appelé « User stories », chacune représentant un besoin d’utilisateur (exemple : En tant qu’utilisateur, je veux pouvoir envoyer des messages). Ces user stories seront donc ensuite développer sur une durée déterminée qui peut varier selon l’entreprise (1 semaine par exemple). La particularité de la version scrum est la recentralisation du projet autour du client. Celui-ci est en contact direct et constant avec la personne appelé le « Scrum master », qui se charge ensuite de faire passer les informations importantes au reste de l’équipe. C’est actuellement une méthodologie de plus en plus utilisée par les entreprises du monde moderne (Orange, Spotify, et bien d’autres encore).
+
+                            </p>
+                        </div>
+                        <div>
+                            <!--<div class="modal-div-picture">
+                                <img class="modal-picture" src="./assets/project/picture-example/js.png" />
+                            </div>
+                            <p class="modal-subtitle"> Ci-dessus un example de code en javascript permettant la réalisation d'une calculette dans la console</p>-->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <h3 class="modal-title">Formation</h3>
+                    <p class="modal-text">
+
+                    </p>
+                    <h3 class="modal-title">Réalisation</h3>
+                    <p class="modal-text">
+
+                    </p>
+                    <h3 class="modal-title">Expérience & Recul sur la compétence</h3>
+                    <p class="modal-text">
+
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div> <!--AGILE SCRUM -- TODO-->
+
+
+    <div class="modal-container" id="modal-VT">
+        <div class="modal-background">
+            <div class="modal">
+                <div class="col-1">
+                    <div class="row">
+                        <div>
+                            <h1 class="modal-title">Veille technologique</h1>
+                            <p class="modal-text">
+                            </p>
+                        </div>
+                        <div>
+                            <!--<div class="modal-div-picture">
+                                <img class="modal-picture" src="./assets/project/picture-example/js.png" />
+                            </div>
+                            <p class="modal-subtitle"> Ci-dessus un example de code en javascript permettant la réalisation d'une calculette dans la console</p>-->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <h3 class="modal-title">Formation</h3>
+                    <p class="modal-text">
+
+                    </p>
+                    <h3 class="modal-title">Réalisation</h3>
+                    <p class="modal-text">
+
+                    </p>
+                    <h3 class="modal-title">Expérience & Recul sur la compétence</h3>
+                    <p class="modal-text">
+
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div> <!--VEILLE TECHNOLOGIQUE -- TODO-->
+
+
+    <div class="modal-container" id="modal-EN">
+        <div class="modal-background">
+            <div class="modal">
+                <div class="col-1">
+                    <div class="row">
+                        <div>
+                            <h1 class="modal-title">Anglais</h1>
+                            <p class="modal-text">
+                            </p>
+                        </div>
+                        <div>
+                            <!--<div class="modal-div-picture">
+                                <img class="modal-picture" src="./assets/project/picture-example/js.png" />
+                            </div>
+                            <p class="modal-subtitle"> Ci-dessus un example de code en javascript permettant la réalisation d'une calculette dans la console</p>-->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <h3 class="modal-title">Formation</h3>
+                    <p class="modal-text">
+
+                    </p>
+                    <h3 class="modal-title">Réalisation</h3>
+                    <p class="modal-text">
+
+                    </p>
+                    <h3 class="modal-title">Expérience & Recul sur la compétence</h3>
+                    <p class="modal-text">
+
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div> <!--ANGLAIS -- TODO-->
+
+
+    <a href="#top" class="top">
+        <img src=".\assets\arrow-up.svg" alt="To the moon!" />
+    </a>
+
     <footer id="footer">
-      <div class="container">
-        <a href="mailto:communitypro47@gmail.com">communitypro47@gmail.com</a>
-        <!-- Social links -->
-        <div class="social">
-          <a href="#" target="_blank"
-            ><img src="./assets/facebook-icon.svg" alt="Facebook"
-          /></a>
-          <a href="#" target="_blank"><img src="./assets/twitter-icon.svg" alt="Twitter" /></a>
-          <a href="#" target="_blank"
-            ><img src="./assets/linkedin-icon.svg" alt="Linkedin"
-          /></a>
-          <a href="#" target="_blank"><img src="./assets/github-icon.svg" alt="GitHub" /></a>
-          <a href="#" target="_blank"
-            ><img src="./assets/hashnode-icon.svg" alt="Hashnode"
-          /></a>
+        <div class="container">
+            <!-- Social links -->
+            <div class="social">
+                <a href="https://www.linkedin.com/in/yohanpradeau/" target="_blank">
+                    <img src="./assets/linkedin-icon.svg" alt="Linkedin" />
+                </a>
+                <a href="https://github.com/YohanPradeau" target="_blank"><img src="./assets/github-icon.svg" alt="GitHub" /></a>
+            </div>
         </div>
-        <!-- Attribution -->
-        <div class="attribution">
-          <a
-            href="https://github.com/CommunityPro/portfolio-html"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              src="https://user-images.githubusercontent.com/62628408/157202263-9174da24-b19a-4017-9b7c-a1d26ae8f014.svg"
-              alt="attribution"
-              width="150px"
-            />
-          </a>
-        </div>
-        <p>Copyright &copy; Communitypro <span id="datee"></span>, All rights reserved</p>
-      </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
     <script src="js/script.js"></script>
-  </body>
+    <script src="js/modal.js"></script>
+</body>
 </html>

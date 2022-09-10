@@ -5,6 +5,7 @@
    * padding and margin
 */
 
+
 .container {
   max-width: var(--width-medium);
   margin: 0 auto;
@@ -91,6 +92,18 @@ h2::selection {
   margin: 1.5rem 0;
 }
 
+.main-text {
+    margin-bottom: 30px;
+    animation: reduce-margin-main-text 7s forwards;
+}
+
+
+.main-text h1 {
+    font-size: 3rem;
+    line-height: 1.2;
+    transition: 0.2s ease-in-out;
+}
+
 .content-text h2 {
   font-size: 3rem;
   line-height: 1.2;
@@ -100,7 +113,7 @@ h2::selection {
 .content-text p {
   padding: 0.5rem;
   margin: 0 auto;
-  max-width: 700px;
+  max-width: 800px;
 }
 
 /* Project cards */
@@ -134,34 +147,92 @@ h2::selection {
 
 /* Project Images */
 
-/* project 1 */
-.card:nth-child(1) {
-  background: url(../assets/project/project-one.png) center center/cover;
+/* project */
+/* VISIOSYS */
+div#VISIOSYS.card {
+    background: url(../assets/projects/no-icon.png) center center/cover;
 }
 
-/* Project 2 */
-.card:nth-child(2) {
-  background: url(../assets/project/project-two.png) center center/cover;
+/* NETSYS */
+div#NETSYS.card {
+    background: url(../assets/projects/no-icon.png) center center/cover;
 }
 
-/* Project 3 */
-.card:nth-child(3) {
-  background: url(../assets/project/project-three.png) center center/cover;
+/* VSTT */
+div#VSTT.card {
+    background: url(../assets/projects/no-icon.png) center center/cover;
 }
 
-/* Project 4 */
-.card:nth-child(4) {
-  background: url(../assets/project/project-four.png) center center/cover;
+/* CHECKEAT */
+div#CHECKEAT.card {
+    background: url(../assets/projects/checkEat.png) center center/cover;
 }
 
-/* Project 5 */
-.card:nth-child(5) {
-  background: url(../assets/project/project-five.png) center center/cover;
+/* UPSA CALENDAR */
+div#UPSACALENDAR.card {
+    background: url(../assets/projects/upsaCalendar.png) center center/cover;
 }
 
-/* Project 6 */
-.card:nth-child(6) {
-  background: url(../assets/project/project-six.png) center center/cover;
+
+/* tech */
+/* JS */
+div#JS.card {
+    background: url(../assets/tech/js.png) center center/cover;
+}
+
+/* PHP */
+div#PHP.card {
+    background: url(../assets/tech/php.png) center center/cover;
+}
+
+/* PY */
+div#PY.card {
+    background: url(../assets/tech/py.png) center center/cover;
+}
+
+/* WL */
+div#WL.card {
+    background: url(../assets/tech/wl.png) center center/cover;
+}
+
+/* JAVA */
+div#JAVA.card {
+    background: url(../assets/tech/java.png) center center/cover;
+}
+
+/* CS */
+div#CS.card {
+    background: url(../assets/tech/cs.png) center center/cover;
+}
+
+
+/*comp*/
+/* FORMATIONS */
+div#FORMATIONS.card {
+    background: url(../assets/trans/formations.png) center center/cover;
+}
+
+/* AGILE - SCRUM */
+div#AS.card {
+    background: url(../assets/trans/formations.png) center center/cover;
+}
+
+/* VEILLE TECHNOLOGIQUE */
+div#VT.card {
+    background: url(../assets/trans/formations.png) center center/cover;
+}
+
+/* ANGLAIS */
+div#EN.card {
+    background: url(../assets/trans/formations.png) center center/cover;
+}
+
+
+
+
+.link {
+    text-decoration:underline;
+    color: dimgrey;
 }
 
 /* Media Queries */
@@ -175,3 +246,110 @@ h2::selection {
     font-size: 2.5rem;
   }
 }
+
+/* Animation Bonjour*/
+
+.first-part {
+    animation: showup 7s forwards;
+    text-align: center;
+}
+
+.second-part-div {
+    height: 0px;
+    animation: reveal 7s forwards;
+}
+
+.second-part {
+    overflow: hidden;
+    animation: slidein 7s forwards;
+}
+@keyframes showup {
+    0% {
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 1;
+    }
+}
+
+
+@keyframes slidein {
+    0% {
+        margin-top: -800px;
+    }
+
+    20% {
+        margin-top: -800px;
+    }
+
+    35% {
+        margin-top: 0px;
+    }
+
+    100% {
+        margin-top: 0px;
+    }
+}
+
+@keyframes reveal {
+    0% {
+        opacity: 0;
+        height: 0px;
+    }
+
+    20% {
+        opacity: 0;
+        height: 0px;
+    }
+
+    30% {
+        opacity: 0;
+        height: 56px;
+    }
+
+    50% {
+        opacity: 1;
+        height: 56px;
+    }
+
+    100% {
+        opacity: 1;
+        height: 56px;
+    }
+}
+
+@keyframes reduce-margin-main-text {
+    0% {
+        margin-bottom: 30px;
+    }
+
+    30% {
+        margin-bottom: 30px;
+    }
+
+    35% {
+        margin-bottom: 0px;
+    }
+
+    100% {
+        margin-bottom: 0px;
+    }
+}
+
+.top {
+    margin-top: 150vh;
+    position: fixed;
+    bottom: 3rem;
+    right: 3rem;
+    box-shadow: 0 0 14px -5px var(--bg-secondary);
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    background-color: var(--bg-primary) !important;
+}
+
