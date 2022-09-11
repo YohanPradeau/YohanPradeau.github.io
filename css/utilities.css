@@ -149,7 +149,7 @@ h2::selection {
 
 /* project */
 /* VISIOSYS */
-div#VISIOSYS.card {
+div#MCUSYS.card {
     background: url(../assets/projects/no-icon.png) center center/cover;
 }
 
@@ -214,17 +214,17 @@ div#FORMATIONS.card {
 
 /* AGILE - SCRUM */
 div#AS.card {
-    background: url(../assets/trans/formations.png) center center/cover;
+    background: url(../assets/trans/agile.png) center center/cover;
 }
 
 /* VEILLE TECHNOLOGIQUE */
 div#VT.card {
-    background: url(../assets/trans/formations.png) center center/cover;
+    background: url(../assets/trans/vt.png) center center/cover;
 }
 
-/* ANGLAIS */
-div#EN.card {
-    background: url(../assets/trans/formations.png) center center/cover;
+/* POLYVALENCE */
+div#POLY.card {
+    background: url(../assets/trans/polyvalence.png) center center/cover;
 }
 
 
