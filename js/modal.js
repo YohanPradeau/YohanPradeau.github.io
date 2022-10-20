@@ -1,23 +1,78 @@
 ///PROJECT
-document.getElementById("MCUSYS").onclick = function () { trigger_modal_show("MCUSYS") };
-document.getElementById("NETSYS").onclick = function () { trigger_modal_show("NETSYS") };
-document.getElementById("VSTT").onclick = function () { trigger_modal_show("VSTT") };
-document.getElementById("CHECKEAT").onclick = function () { trigger_modal_show("CHECKEAT") };
-document.getElementById("UPSACALENDAR").onclick = function () { trigger_modal_show("UPSACALENDAR") };
+var MCUSYS = document.querySelectorAll(".MCUSYS")
+for (i = 0; i < MCUSYS.length; i++) {
+    MCUSYS[i].addEventListener('click', function () {
+        trigger_modal_show("MCUSYS")
+    });
+}
+var NETSYS = document.querySelectorAll(".NETSYS")
+for (i = 0; i < NETSYS.length; i++) {
+    NETSYS[i].addEventListener('click', function () {
+        trigger_modal_show("NETSYS")
+    });
+}
+var MOBISCORE = document.querySelectorAll(".MOBISCORE")
+for (i = 0; i < MOBISCORE.length; i++) {
+    MOBISCORE[i].addEventListener('click', function () {
+        trigger_modal_show("MOBISCORE")
+    });
+}
+var UPSACALENDAR = document.querySelectorAll(".UPSACALENDAR")
+for (i = 0; i < UPSACALENDAR.length; i++) {
+    UPSACALENDAR[i].addEventListener('click', function () {
+        trigger_modal_show("UPSACALENDAR")
+    });
+}
+var EPICERIE = document.querySelectorAll(".EPICERIE")
+for (i = 0; i < EPICERIE.length; i++) {
+    EPICERIE[i].addEventListener('click', function () {
+        trigger_modal_show("EPICERIE")
+    });
+}
 
 document.getElementById("modal-MCUSYS").onclick = function () { trigger_modal_hide("MCUSYS") };
 document.getElementById("modal-NETSYS").onclick = function () { trigger_modal_hide("NETSYS") };
-document.getElementById("modal-VSTT").onclick = function () { trigger_modal_hide("VSTT") };
-document.getElementById("modal-CHECKEAT").onclick = function () { trigger_modal_hide("CHECKEAT") };
+document.getElementById("modal-MOBISCORE").onclick = function () { trigger_modal_hide("MOBISCORE") };
 document.getElementById("modal-UPSACALENDAR").onclick = function () { trigger_modal_hide("UPSACALENDAR") };
+document.getElementById("modal-EPICERIE").onclick = function () { trigger_modal_hide("EPICERIE") };
 
 //TECH
-document.getElementById("JS").onclick = function () { trigger_modal_show("JS") };
-document.getElementById("PHP").onclick = function () { trigger_modal_show("PHP") };
-document.getElementById("PY").onclick = function () { trigger_modal_show("PY") };
-document.getElementById("WL").onclick = function () { trigger_modal_show("WL") };
-document.getElementById("JAVA").onclick = function () { trigger_modal_show("JAVA") };
-document.getElementById("CS").onclick = function () { trigger_modal_show("CS") };
+var JS = document.querySelectorAll(".JS")
+for (i = 0; i < JS.length; i++) {
+    JS[i].addEventListener('click', function () {
+        trigger_modal_show("JS")
+    });
+}
+var PHP = document.querySelectorAll(".PHP")
+for (i = 0; i < PHP.length; i++) {
+    PHP[i].addEventListener('click', function () {
+        trigger_modal_show("PHP")
+    });
+}
+var PY = document.querySelectorAll(".PY")
+for (i = 0; i < PY.length; i++) {
+    PY[i].addEventListener('click', function () {
+        trigger_modal_show("PY")
+    });
+}
+var WL = document.querySelectorAll(".WL")
+for (i = 0; i < WL.length; i++) {
+    WL[i].addEventListener('click', function () {
+        trigger_modal_show("WL")
+    });
+}
+var JAVA = document.querySelectorAll(".JAVA")
+for (i = 0; i < JAVA.length; i++) {
+    JAVA[i].addEventListener('click', function () {
+        trigger_modal_show("JAVA")
+    });
+}
+var CS = document.querySelectorAll(".CS")
+for (i = 0; i < CS.length; i++) {
+    CS[i].addEventListener('click', function () {
+        trigger_modal_show("CS")
+    });
+}
 
 document.getElementById("modal-JS").onclick = function () { trigger_modal_hide("JS") };
 document.getElementById("modal-PHP").onclick = function () { trigger_modal_hide("PHP") };
@@ -27,10 +82,30 @@ document.getElementById("modal-JAVA").onclick = function () { trigger_modal_hide
 document.getElementById("modal-CS").onclick = function () { trigger_modal_hide("CS") };
 
 //TRANS
-document.getElementById("FORMATIONS").onclick = function () { trigger_modal_show("FORMATIONS") };
-document.getElementById("AS").onclick = function () { trigger_modal_show("AS") };
-document.getElementById("VT").onclick = function () { trigger_modal_show("VT") };
-document.getElementById("POLY").onclick = function () { trigger_modal_show("POLY") };
+var FORMATIONS = document.querySelectorAll(".FORMATIONS")
+for (i = 0; i < FORMATIONS.length; i++) {
+    FORMATIONS[i].addEventListener('click', function () {
+        trigger_modal_show("FORMATIONS")
+    });
+}
+var AS = document.querySelectorAll(".AS")
+for (i = 0; i < AS.length; i++) {
+    AS[i].addEventListener('click', function () {
+        trigger_modal_show("AS")
+    });
+}
+var VT = document.querySelectorAll(".VT")
+for (i = 0; i < VT.length; i++) {
+    VT[i].addEventListener('click', function () {
+        trigger_modal_show("VT")
+    });
+}
+var POLY = document.querySelectorAll(".POLY")
+for (i = 0; i < POLY.length; i++) {
+    POLY[i].addEventListener('click', function () {
+        trigger_modal_show("POLY")
+    });
+}
 
 document.getElementById("modal-FORMATIONS").onclick = function () { trigger_modal_hide("FORMATIONS") };
 document.getElementById("modal-AS").onclick = function () { trigger_modal_hide("AS") };

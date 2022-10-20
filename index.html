@@ -36,10 +36,12 @@
           href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
           integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
           crossorigin="anonymous" />
-    <link rel="stylesheet" href="css/modal.css" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/utilities.css" />
-    <link rel="stylesheet" href="css/timeline.css" />
+    <link rel="stylesheet" href="./css/modal.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/utilities.css" />
+    <link rel="stylesheet" href="./css/timeline.css" />
+    <link rel="stylesheet" href="./css/dropdown.css" />
+    <link rel="stylesheet" href="./css/tooltip.css" />
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.slim.js"></script>
 </head>
 <body>
@@ -49,15 +51,26 @@
             <div class="container">
                 <!-- Logo -->
                 <h1 id="logo">
-                    <a href="#">
+                    <a class="navbar-left" href="#">
                         <img src="./assets/logo.png" alt="Your Logo" />
+                        <p>Yohan PRADEAU</p>
                     </a>
                 </h1>
                 <!-- Navbar links -->
                 <ul class="nav-menu">
                     <li><a class="nav-link" href="#projects">REALISATIONS</a></li>
-                    <li><a class="nav-link" href="#techno">TECHNOLOGIES</a></li>
-                    <li><a class="nav-link" href="#skills">COMPETENCES</a></li>
+                    <li class="dropdown">
+                        <span class="nav-link">COMPETENCES</span>
+                        <img class="down" src="assets/arrow-down.svg" />
+                        <ul class="dropdown_menu dropdown_menu-anim">
+                            <li class="dropdown_item-1"><a class="nav-link" href="#techno">TECHNIQUES</a></li>
+                            <li class="dropdown_item-2"><a class="nav-link" href="#skills">HUMAINES</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                    <a href="mailto:yoh.pradeau@gmail.com"
+                       class="nav-link btn contact btn-secondary"
+                       target="_blank">Me contacter</a></li>
                     <li>
                         <a class="nav-link btn btn-primary"
                            href=".\assets\cv\cv_YohanPRADEAU.pdf">
@@ -99,75 +112,89 @@
                 <h4>JS, PHP, JAVA, PYTHON, C#, WLANGAGE</h4>
 
                 <p class="lh-2">
-                    J'ai 24 ans, actuellement en semestre 10 à l'école INTECH en filière Ingénierie Logicielle
-                    <br>Je possède des connaissances dans de nombreux langages (JS, PHP, CSS, JAVA, C#, Python, WLangage) ainsi qu'un rythme d'apprentissage rapide.
-                    <br>Habitué de la méthode Agile SCRUM, je travaille avec celle-ci depuis bientôt 3 ans.
-                    <br>J'ai aussi eu l'opportunité de réaliser des formations sur des outils informatique tel que Wix.
-                    <br>Durant mes études, j'ai participé à la réalisation du Téléthon d'Agen 2019 en tant que trésorier.
-                    <br>La polyvalence et l'acharnement sont mes qualités les plus reconnues, je ne recule devant aucun challenge pour atteindre les objectifs que je me suis fixés.
-                    <br>Je suis quelqu'un de passionés par la musique, j'écoute et suit de nombreux artistes dans différents genres
+                    J'ai 24 ans, actuellement en semestre 10 à l'école INTECH en filière Ingénierie Logicielle. 
+                    Je possède des connaissances dans de nombreux langages (JS, PHP, CSS, JAVA, C#, Python, WLangage) ainsi qu'un rythme d'apprentissage rapide grâce à ma formation au sein de l’école IN’TECH. 
+                    Habitué de la méthode Agile SCRUM, j’ai travaillé avec celle-ci pour la réalisation de la plupart de mes projets et cela fait bientôt 3 ans que je me sers exclusivement d’elle. 
+                    J'ai eu l'opportunité de développer de nombreuses qualités humaines au travers de réalisations sociales, comme par exemple lors de la réalisation du Téléthon d’Agen 2019 (dont j’étais le trésorier) ainsi que lors des formations réalisées au sein de la MFR Vallée-du-Lot. 
+                    Enfin, je suis un grand passionné de musique, j’écoute de nombreux genres, que ce soit du rap ou du rock, mais principalement de l’électro (synth metal (MBR), phonk (Kordhell), etc.)
+
                 </p>
             </div>
-            <!--<div class="timeline">
+            <div class="timeline">
                 <ol>
                     <li>
-                        <div>
-                            <time>1934</time> At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
+                        <div class="tooltip">
+                            <time>2022</time> Obtention de la certification CCNA 1 de Cisco.
+                            <br /><br /><a href="https://www.credly.com/earner/earned/badge/fef8594c-5722-4aa1-ac87-8c990270599e" target="_blank" class="link">Lien du badge</a>
+                            <div class="tooltip-top">
+                                <h3>CCNA 1</h3>
+                                <p>Le diplôme CCNA 1 provient de Cisco, il certifie un certain niveau de connaissance/compétences afin de configurer et vérifier des réseaux locaux.</p>
+                                <i></i>
+                            </div>
                         </div>
                     </li>
                     <li>
-                        <div>
-                            <time>1937</time> Proin quam velit, efficitur vel neque vitae, rhoncus commodo mi. Suspendisse finibus mauris et bibendum molestie. Aenean ex augue, varius et pulvinar in, pretium non nisi.
+                        <div class="tooltip tooltip-bottom-container">
+                            <time>2022</time> Obtention du TOEIC (niveau C1 - 980/990)
+                            <div class="tooltip-bottom">
+                                <h3>Toeic</h3>
+                                <p>Le TOEIC (The Test of English for International Communication) est un test permettant d'évaluer la capacité d'une personne à parler en anglais de tous les jours. Les notes vont de 10 à 990 points.</p>
+                                <i></i>
+                            </div>
                         </div>
                     </li>
                     <li>
-                        <div>
-                            <time>1940</time> Proin iaculis, nibh eget efficitur varius, libero tellus porta dolor, at pulvinar tortor ex eget ligula. Integer eu dapibus arcu, sit amet sollicitudin eros.
+                        <div class="tooltip">
+                            <time>2021</time> Début de mon alternance dans l'entreprise Agriware en tant que développeur WEB.
+                            <div class="tooltip-top">
+                                <h3>Alternance chez Agriware</h3>
+                                <p>Début de mon alternance chez Agriware. Cette entreprise produit et vend ses propres automates afin d'optimiser le rendement des serriculteur. 
+                                    Lors de cette alternance, j'ai participé au développement de la réalisation MCUSys en tant que développeur WEB (JS/VUEjs et PHP/Symfony).</p>
+                                <i></i>
+                            </div>
                         </div>
                     </li>
                     <li>
-                        <div>
-                            <time>1943</time> In mattis elit vitae odio posuere, nec maximus massa varius. Suspendisse varius volutpat mattis. Vestibulum id magna est.
+                        <div class="tooltip tooltip-bottom-container">
+                            <time>2020</time> Stage de 6 mois dans l'entreprise Agriware en tant que développeur WEB.
+                            <div class="tooltip-bottom">
+                                <h3>Stage chez Agriware</h3>
+                                <p>Début de mon alternance chez Agriware. Cette entreprise produit et vend ses propres automates afin d'optimiser le rendement des serriculteur. 
+                                    Lors de cette alternance, j'ai participé au développement de la réalisation NETSYS en tant que développeur WEB (WLangage/WebDev).</p>
+                                <i></i>
+                            </div>
                         </div>
                     </li>
                     <li>
-                        <div>
-                            <time>1946</time> In mattis elit vitae odio posuere, nec maximus massa varius. Suspendisse varius volutpat mattis. Vestibulum id magna est.
+                        <div class="tooltip">
+                            <time>2021</time> Obtention de mon bachelor d'informatique option Ingénierie du logiciel (IL).
+                            <div class="tooltip-top">
+                                <h3>Bachelor IL</h3>
+                                <p>Suite à mes 3 ans d'études (5 semestres de cours avec projets, 1 semestre en stage), j'ai obtenu mon bachelor d'informatique option Ingénierie du logiciel (IL).</p>
+                                <i></i>
+                            </div>
                         </div>
                     </li>
                     <li>
-                        <div>
-                            <time>1956</time> In mattis elit vitae odio posuere, nec maximus massa varius. Suspendisse varius volutpat mattis. Vestibulum id magna est.
+                        <div class="tooltip tooltip-bottom-container">
+                            <time>2018</time> Début de mes études dans l'établissement d'enseignement supérieur IN'TECH SUD.
+                            <div class="tooltip-bottom">
+                                <h3>IN'TECH SUD</h3>
+                                <p>Situé en plein coeur d'Agen, l’INTECH SUD AGEN est une école supérieure d’ingénierie informatique du groupe ESIEA qui délivre des titres d’expert(e) en Ingénierie du Logiciel et d’expert(e) en Systèmes et Réseaux bac +5 enregistrés au RNCP Niveau 7.</p>
+                                <i></i>
+                            </div>
                         </div>
                     </li>
                     <li>
-                        <div>
-                            <time>1957</time> In mattis elit vitae odio posuere, nec maximus massa varius. Suspendisse varius volutpat mattis. Vestibulum id magna est.
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <time>1967</time> Aenean condimentum odio a bibendum rhoncus. Ut mauris felis, volutpat eget porta faucibus, euismod quis ante.
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <time>1977</time> Vestibulum porttitor lorem sed pharetra dignissim. Nulla maximus, dui a tristique iaculis, quam dolor convallis enim, non dignissim ligula ipsum a turpis.
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <time>1985</time> In mattis elit vitae odio posuere, nec maximus massa varius. Suspendisse varius volutpat mattis. Vestibulum id magna est.
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <time>2000</time> In mattis elit vitae odio posuere, nec maximus massa varius. Suspendisse varius volutpat mattis. Vestibulum id magna est.
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <time>2005</time> In mattis elit vitae odio posuere, nec maximus massa varius. Suspendisse varius volutpat mattis. Vestibulum id magna est.
+                        <div class="tooltip">
+                            <time>2017</time> Obtention de mon baccalauréat STI2D option Système d'Information et Numérique (SIN) avec mention Bien.
+                            <div class="tooltip-top">
+                                <h3>STI2D SIN</h3>
+                                <p>Le bac STI2D est un bac généraliste qui se positionne comme une alternative au bac scientifique. 
+                                    Cette formation est basée sur un tronc commun scientifique et technologique. 
+                                    Cette spécialité porte sur l’analyse et la création de solutions techniques relatives au traitement des flux d’information (voix, données, images) dans les systèmes pluri-techniques actuels qui comportent à la fois une gestion locale et à distance de l’information. </p>
+                                <i></i>
+                            </div>
                         </div>
                     </li>
                     <li></li>
@@ -181,7 +208,7 @@
                         <img src=".\assets\arrow-right.svg" alt="To the right!" />
                     </button>
                 </div>
-            </div>-->
+            </div>
             <a href="mailto:yoh.pradeau@gmail.com"
                class="btn btn-secondary"
                target="_blank">Me contacter</a>
@@ -193,69 +220,63 @@
         <div class="division"></div>
         <div class="content-text">
             <h2>Réalisation</h2>
-            <p>Voici quelque projet que j'ai réalisés ou d'ont j'ais fait partie</p>
+            <p>Voici quelque projet que j'ai réalisé ou dont j'ai fait partie</p>
         </div>
 
         <article class="project">
             <!-- Project 1 -->
-            <div href="" class="card button animation" id="MCUSYS">
+            <div href="" class="card button animation MCUSYS" id="MCUSYS">
                 <div class="project-info">
                     <div class="project-bio">
                         <h3>McuSYS</h3>
                         <p>Web, automatisme, agriculture</p>
-                        <!--<p><a class="animation" id="JS">JS</a>, <a class="animation" id="PHP">PHP</a></p>-->
-                        <p>JS, PHP</p>
+                        <p>JS – PHP – agile – veille</p>
                     </div>
                 </div>
             </div>
 
             <!-- Project 2 -->
-            <div href="" class="card button animation" id="NETSYS">
+            <div href="" class="card button animation NETSYS" id="NETSYS">
                 <div class="project-info">
                     <div class="project-bio">
                         <h3>NETSYS</h3>
                         <p>Web, automatisme, agriculture</p>
-                        <!--<p><a class="animation" id="WL">WLangage</a></p>-->
-                        <p>WLangage</p>
+                        <p>WLangage – Formation</p>
                     </div>
                 </div>
             </div>
 
-            <!-- Porject 3 -->
-            <div href="" class="card button animation" id="VSTT">
+            <!-- PROject 3 -->
+            <div href="" class="card button animation MOBISCORE" id="MOBISCORE">
                 <div class="project-info">
                     <div class="project-bio">
-                        <h3>Vue and Symfony Translation Tools</h3>
-                        <p>Scripts, traduction</p>
-                        <p><!--<a class="animation" id="PY">Python</a>--></p>
-                        <p>Python</p>
+                        <h3>Mobiscore</h3>
+                        <p>Android, mobile, Web</p>
+                        <p>Java – Python – Polyvalence</p>
                     </div>
                     <div class="project-link">
-                        <a href="https://github.com/YohanPradeau/VSTT" target="_blank"><i class="fab fa-github"></i></a>
                     </div>
                 </div>
             </div>
 
             <!-- Project 4 -->
-            <div href="" class="card button animation" id="CHECKEAT">
+            <div href="" class="card button animation UPSACALENDAR" id="UPSACALENDAR">
                 <div class="project-info">
                     <div class="project-bio">
-                        <h3>Check Eat</h3>
-                        <p>Android, normes alimentaire</p>
-                        <!--<p><a class="animation" id="JAVA">Java</a></p>-->
-                        <p>Java</p>
+                        <h3>UPSA Calendar</h3>
+                        <p>Windows, organisation</p>
+                        <p>C# - Agile </p>
                     </div>
                 </div>
             </div>
 
             <!-- Project 5 -->
-            <div href="" class="card button animation" id="UPSACALENDAR">
+            <div href="" class="card button animation EPICERIE" id="EPICERIE">
                 <div class="project-info">
                     <div class="project-bio">
-                        <h3>UPSA Calendar</h3>
-                        <p>Windows, organisation</p>
-                        <!--<p><a class="animation" id="CS">C#</a></p>-->
-                        <p>C#</p>
+                        <h3>E-picerie</h3>
+                        <p>Humain, organisation, formations</p>
+                        <p>Formations - Polyvalence</p>
                     </div>
                 </div>
             </div>
@@ -267,13 +288,13 @@
     <section id="techno" class="project-container container">
         <div class="division"></div>
         <div class="content-text">
-            <h2>Technologies</h2>
+            <h2>Compétences techniques</h2>
             <p>Quelques technologies que j'apprécie</p>
         </div>
 
         <article class="project">
             <!-- Techno 1 -->
-            <div href="" class="card button animation" id="JS">
+            <div href="" class="card button animation JS" id="JS">
                 <div class="project-info">
                     <div class="project-bio">
                         <h3>JavaScript</h3>
@@ -283,7 +304,7 @@
             </div>
 
             <!-- Techno 2 -->
-            <div href="" class="card button animation" id="PHP">
+            <div href="" class="card button animation PHP" id="PHP">
                 <div class="project-info">
                     <div class="project-bio">
                         <h3>PHP</h3>
@@ -293,7 +314,7 @@
             </div>
 
             <!-- Techno 3 -->
-            <div href="" class="card button animation" id="PY">
+            <div href="" class="card button animation PY" id="PY">
                 <div class="project-info">
                     <div class="project-bio">
                         <h3>Python</h3>
@@ -303,7 +324,7 @@
             </div>
 
             <!-- Techno 4 -->
-            <div href="" class="card button animation" id="WL">
+            <div href="" class="card button animation WL" id="WL">
                 <div class="project-info">
                     <div class="project-bio">
                         <h3>WLangage</h3>
@@ -313,7 +334,7 @@
             </div>
 
             <!-- Techno 5 -->
-            <div href="" class="card button animation" id="JAVA">
+            <div href="" class="card button animation JAVA" id="JAVA">
                 <div class="project-info">
                     <div class="project-bio">
                         <h3>JAVA</h3>
@@ -323,7 +344,7 @@
             </div>
 
             <!-- Techno 6 -->
-            <div href="" class="card button animation" id="CS">
+            <div href="" class="card button animation CS" id="CS">
                 <div class="project-info">
                     <div class="project-bio">
                         <h3>CSHARP</h3>
@@ -339,13 +360,13 @@
     <section id="skills" class="project-container container">
         <div class="division"></div>
         <div class="content-text">
-            <h2>Compétences</h2>
+            <h2>Compétences humaines</h2>
             <p>Mes compétences humaines, gagnées à travers diverses expériences.</p>
         </div>
 
         <article class="project">
             <!-- Comp 1 -->
-            <div href="" class="card button animation" id="FORMATIONS">
+            <div href="" class="card button animation FORMATIONS" id="FORMATIONS">
                 <div class="project-info">
                     <div class="project-bio">
                         <h3>Formations</h3>
@@ -355,7 +376,7 @@
             </div>
 
             <!-- Comp 2 -->
-            <div href="" class="card button animation" id="AS">
+            <div href="" class="card button animation AS" id="AS">
                 <div class="project-info">
                     <div class="project-bio">
                         <h3>Agile - Scrum</h3>
@@ -365,7 +386,7 @@
             </div>
 
             <!-- Comp 3 -->
-            <div href="" class="card button animation" id="VT">
+            <div href="" class="card button animation VT" id="VT">
                 <div class="project-info">
                     <div class="project-bio">
                         <h3>Veille technologique</h3>
@@ -375,7 +396,7 @@
             </div>
 
             <!-- Comp 4 -->
-            <div href="" class="card button animation" id="POLY">
+            <div href="" class="card button animation POLY" id="POLY">
                 <div class="project-info">
                     <div class="project-bio">
                         <h3>Polyvalence</h3>
@@ -397,10 +418,17 @@
                 <div class="col-1">
                     <div class="row">
                         <div>
-                            <h1 class="modal-title">MCUSYS</h1>
+                            <h1 class="modal-title">McuSys</h1>
                             <p class="modal-text">
-                                McuSYS est le descendant direct de Net Sys. J’ai travaillé sur le Parti visuel du site, celle-ci est faite en PHP et Javascript avec les frameworks Symfony et VueJs. Il possède ainsi l’avantage d’être bien plus fluide, et avec des possibilités accrues du point de vue utilisateur que ses ancêtres, tournant respectivement avec WebDev et WinDev. De plus, son interface mise à jour permettra aux nouveaux utilisateurs d’avoir une expérience proche de ce qu’ils ont sur des sites dont ils sont habitués. Enfin, le fait qu’il tourne sur un serveur web permet un affichage efficient sur mobile, tablette et PC.
+                                McuSys est le descendant direct de NetSys. J’ai travaillé sur la partie visuel du site, celle-ci est faite en <b>PHP</b> et <b>Javascript</b> avec les frameworks Symfony et VueJs. Il possède ainsi l’avantage d’être bien plus fluide, et avec des possibilités accrues du point de vue utilisateur que ses ancêtres, tournant respectivement avec WebDev et WinDev. De plus, son interface mise à jour permettra aux nouveaux utilisateurs d’avoir une expérience proche de ce qu’ils ont sur des sites dont ils sont habitués. Enfin, le fait qu’il tourne sur un serveur web permet un <b>affichage efficient sur mobile, tablette et PC</b>.
 
+                            </p><br />
+                            <p class="modal-text">
+                                Compétences relatives à la réalisation :
+                                <u><a class="JS">JS</a></u>,
+                                <u><a class="PHP">PHP</a></u>,
+                                <u><a class="AS">Agile Scrum</a></u>,
+                                <u><a class="VT">Veille Technologique</a></u>.
                             </p>
                         </div>
                         <div>
@@ -414,34 +442,39 @@
                 <div class="col-2">
                     <h3 class="modal-title">Qu’est donc le « McuSYS » ?</h3>
                     <p class="modal-text">
-                        Le MCUSys est un automate complexe qui permet au sériculteur de gérer de manière automatisé leurs serres. 
-                        Il s’agit Front end, c’est-à-dire du visuel affiché aux écrans. 
-                        Grâce à celui-ci, le client peut programmer ses groupes et périodes d’arrosages, mais aussi le déplacement de ses chariots horticoles, ou bien tout ce qui touche à la climatisation dans sa serre 
-                        (chauffage, Co2, luminosité, humidité, etc.). Le but de cet outil est de permettre au sériculteur de gagner tout autant en temps, qu’en traçabilité. 
-                        En effet avec cette solution ils possèdent aussi un historique détaillé de chaque paramètre et ceci en chaque instant.
+                        Le MCUSys est un <b>automate complexe</b> qui permet au serriculteur de gérer de manière <b>automatisée leurs serres</b>.
+                        Il s’agit Front end, c’est-à-dire du visuel affiché aux écrans.
+                        Grâce à celui-ci, le client peut <b>programmer ses groupes et périodes d’arrosages</b>, mais aussi le <b>déplacement de ses chariots horticoles</b>,
+                        ou bien tout ce qui touche à la <b>climatisation dans sa serre</b> (chauffage, Co2, luminosité, humidité, etc.).
+                        Le but de cet outil est de permettre au serriculteur de gagner tout autant en temps, qu’en traçabilité.
+                        En effet, avec cette solution ils possèdent aussi un <b>historique détaillé de chaque paramètre</b> et ceci en chaque instant.
 
 
                     </p>
                     <h3 class="modal-title">Produit de l’innovation Française</h3>
                     <p class="modal-text">
-                        <a class="link" target="_blank" href="https://www.sival-innovation.com/mcusys-gestion-globale-de-la-serre/">Gagnant du SIVAL de bronze 2022</a>, 
-                        le MCUSys est une innovation dans le domaine de par sa flexibilité et sa capacité à gérer tout ce qui se fait dans une serre. 
-                        L’objectif final du MCUSys pour l’utilisateur est la quasi-autonomie. En effet, à l’exception de certaines choses qui ne peuvent être automatisé dû à la réglementation française, 
-                        tout le reste est autonome, et en cas de problème une alarme est instantanément déclenchée et une notification (s’il possède l’application mobile) ainsi qu’un SMS sont envoyés au client.
+                        <a class="link" target="_blank" href="https://www.sival-innovation.com/mcusys-gestion-globale-de-la-serre/">Gagnant du SIVAL de bronze 2022</a>,
+                        le MCUSys est une innovation dans le domaine de par sa flexibilité et sa capacité à gérer tout ce qui se fait dans une serre.
+                        L’objectif final du MCUSys pour l’utilisateur est la quasi-autonomie. En effet, à l’exception de certaines choses qui ne peuvent être automatisé dû à la réglementation française,
+                        tout le reste est autonome, et en cas de problème une alarme est instantanément déclenchée et une notification (s’il possède l’application mobile) ainsi qu’un SMS sont envoyé au client.
 
 
                     </p>
                     <h3 class="modal-title">Ma participation dans ce projet</h3>
                     <p class="modal-text">
 
-                        J’ai travaillé sur ce projet spécialement dans le visuel, où j’ai réalisé une partie de l’affichage et de l’interface de programmation (interface des chariots, de leurs programmations, des stations, des compartiments ainsi qu’une grande quantité de module sous forme de modale). Ce projet colossal au cours duquel j’aurai visité plusieurs serres et discuté avec plusieurs clients sur les points les plus importants, a été réalisé par notre équipe de 5 personnes (Alexis D., Xavier M., Fernando B., Jean-François D. ainsi que moi-même) dirigées par M. LONCKE.
-                        C’est grâce à ce projet que j’ai acquis une maitrise de VueJS ainsi que de Symfony, et en retour ensemble nous livrerons un successeur au NetGlobal, avec une application modulable, avec un visuel moderne et performant, le tout accessible depuis n’importe quelle plateforme.
+                        J’ai travaillé sur ce projet spécialement dans le visuel, où j’ai réalisé une partie de l’affichage et de l’interface de programmation
+                        (interface des chariots, de leurs programmations, des stations, des compartiments ainsi qu’une grande quantité de module sous forme de modal).
+                        C’est un projet colossal au cours duquel j’aurai visité plusieurs serres et discuté avec plusieurs clients sur les points les plus importants.
+                        Ce projet est réalisé par notre équipe de 5 personnes (Alexis D., Xavier M., Fernando B., Jean-François D. ainsi que moi-même) dirigée par M. LONCKE.
+                        C’est grâce à ce projet que j’ai acquis une maîtrise de VueJS ainsi que de Symfony.
+
 
                     </p>
                 </div>
             </div>
         </div>
-    </div> <!--MCUSYS -- TODO-->
+    </div> <!--MCUSYS-->
 
 
     <div class="modal-container" id="modal-NETSYS">
@@ -452,7 +485,13 @@
                         <div>
                             <h1 class="modal-title">NETSYS</h1>
                             <p class="modal-text">
+                                Le NetSys, c’est le père du projet McuSys, son proof of concept. Cet outil a été développé avec la technologie WebDev, celle-ci utilisant le langage de programmation de l’entreprise PC Soft : le WLangage.
+                            </p>
 
+                            <br /><p class="modal-text">
+                                Compétences relatives à la réalisation :
+                                <u><a class="WL">WLangage</a></u>,
+                                <u><a class="FORMATIONS">Formation</a></u>.
                             </p>
                         </div>
                         <div>
@@ -464,33 +503,44 @@
                     </div>
                 </div>
                 <div class="col-2">
-                    <h3 class="modal-title">Formation</h3>
+                    <h3 class="modal-title">Qu’est que « NetSys » ?</h3>
                     <p class="modal-text">
-
+                        Ce projet avait pour but de montrer les différents axes d’amélioration du produit actuel de l’entreprise (le netGlobal), afin de proposer une solution plus moderne au client, nous permettant ainsi d’attirer aux passages un public plus jeune, plus connecté. Ce projet a été d’une grande importance, car c’est sur lui que c’est reposé la survie de l’entreprise : si nos clients n’apprécient pas le concept de cette application le futur de l’entreprise sera remis en question, car le produit actuel daté de plus de 20 ans devient difficile à vendre à de jeunes agriculteurs.
                     </p>
-                    <h3 class="modal-title">Réalisation</h3>
+                    <h3 class="modal-title">Le futur d’une PME</h3>
                     <p class="modal-text">
-
+                        Ce projet que l’entreprise dans laquelle je suis a permis à celle-ci de survivre. Développé par notre équipe de 4 personnes (M. X. Monset, M. F. Berrocoso, M. J-F. Duffau ainsi que moi-même Yohan Pradeau), notre outil a généré un grand engouement de la part de nos clients et installateurs par rapport à une possible nouvelle évolution de l’outil. De cela a découlé l’installation d’un prototype chez l’entreprise Hortival, spécialiste de l’horticulture, afin qu’ils puissent nous faire des retours sur l’utilisation de celui-ci dans un milieu réel. Après plusieurs semaines de discussions, de mises à jour et de retours, nous avons conclu le projet comme étant une réussite, et avons commencé la réalisation du projet McuSys.
                     </p>
-                    <h3 class="modal-title">Expérience & Recul sur la compétence</h3>
+                    <h3 class="modal-title">Ma participation dans ce projet</h3>
                     <p class="modal-text">
+                        J’ai participé à la réalisation de ce projet au travers de nombreuses pages dites « lectures » (pages utilisées par les serriculteurs afin de suivre en temps réel l’évolution de leurs serres). J’avais réalisé pour ce projet la page d’accueil, mais aussi la page lecture chariot et la page lecture station.
+                        La page d’accueil permettait d’afficher de petites cartes permettant à l’utilisateur d’avoir d’un coup d’œil rapide toutes les informations importantes (alarmes, état des appareils, statistiques importantes comme le débit d’eau par exemple)
+                        La lecture chariot quant à elle permet à l’utilisateur de voir toutes les informations sur son chariot horticole. Ainsi, il peut voir précisément quelles vannes sont ouverte, la position du chariot sur la parcelle de terre, ou bien différentes statistiques sur les arrosages récents (nombre de passage du chariot, durée, eau utilisée, etc.)
+                        Enfin, la page lecture station donne à l’utilisateur la possibilité de voir le statut de sa station en direct (vanne utilisée, quel mélange d’engrais, pH et Ec de celui-ci).
 
                     </p>
                 </div>
             </div>
         </div>
-    </div> <!--NETSYS -- TODO-->
+    </div> <!--NETSYS-->
 
 
-    <div class="modal-container" id="modal-VSTT">
+    <div class="modal-container" id="modal-MOBISCORE">
         <div class="modal-background">
             <div class="modal">
                 <div class="col-1">
                     <div class="row">
                         <div>
-                            <h1 class="modal-title">VSTT - Vue and Symfony Translation Tools</h1>
+                            <h1 class="modal-title">Mobiscore</h1>
                             <p class="modal-text">
+                                Avant de définir Mobiscore, j’ai besoin de vous parler d’un sport très particulier. Il s’agit du squash, un sport de raquette qui se joue sur un terrain de jeu entièrement entouré de murs/vitres et où les joueurs doivent frapper une petite balle noire en caoutchouc, de telle sorte que leurs adversaires ne puissent pas la reprendre.
+                            </p>
 
+                            <br /><p class="modal-text">
+                                Compétences relatives à la réalisation :
+                                <u><a class="JAVA">Java</a></u>,
+                                <u><a class="PY">Python</a></u>,
+                                <u><a class="POLY">Polyvalence</a></u>.
                             </p>
                         </div>
                         <div>
@@ -502,60 +552,24 @@
                     </div>
                 </div>
                 <div class="col-2">
-                    <h3 class="modal-title">Formation</h3>
+                    <h3 class="modal-title">Qu’est que « Mobiscore » ?</h3>
                     <p class="modal-text">
-
+                        Le besoin initial était de créer une application permettant à l’arbitre de noter les points facilement et rapidement, permettant ainsi de ne rater aucune action et donc d’éviter les erreurs d’arbitrage, qui avaient par le passé causé des disputes entre joueurs et arbitres. Les points notés devront ensuite être visibles sur un grand afficheur 7 segments.
                     </p>
-                    <h3 class="modal-title">Réalisation</h3>
+                    <h3 class="modal-title">Une réalisation complexe</h3>
                     <p class="modal-text">
-
+                        Ce projet, demandé par le Lycée Antoine Bourdelle et porté par M. M. Alary a donc était réalisé par l’équipe que je dirigeais, composé de M. T. Diot ainsi que moi-même.  Ce fut un projet délicat pour de multiples raisons, les principales étant le serveur gérant la communication téléphone – afficheur, ainsi que l’afficheur lui-même. En effet, il a fallu mettre en place un système de sécurité pour éviter que n’importe qui ne puisse modifier le score d’un match en cours. Pour ce faire, nous avions opté pour un système utilisant un Raspberry PI avec son propre réseau Wi-Fi (RaspAP) s’occupant de limiter les connexions, ainsi qu’un serveur Django auquel le téléphone enverra les données du match pour qu’elles soient retransmises aux spectateurs. Ce projet une fois réussis et validé par le Product Owner (commanditaire du projet) a été livré prêt à être installé avec l’aide de toutes les documentations nécessaires. A la suite de cela, nous avons reçu beaucoup de retours positifs, ainsi qu’une invitation à un tournoi amateur fort intéressant, on peut donc en déduire une grande satisfaction de la part de notre commanditaire et Product Owner, Monsieur M. Alary !
                     </p>
-                    <h3 class="modal-title">Expérience & Recul sur la compétence</h3>
+                    <h3 class="modal-title">Ma participation dans ce projet</h3>
                     <p class="modal-text">
-
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div> <!--VSTT -- TODO-->
-
-
-    <div class="modal-container" id="modal-CHECKEAT">
-        <div class="modal-background">
-            <div class="modal">
-                <div class="col-1">
-                    <div class="row">
-                        <div>
-                            <h1 class="modal-title">Check Eat</h1>
-                            <p class="modal-text">
-
-                            </p>
-                        </div>
-                        <div>
-                            <!--<div class="modal-div-picture">
-                                <img class="modal-picture" src="./assets/project/picture-example/js.png" />
-                            </div>
-                            <p class="modal-subtitle"> Ci-dessus un example de code en javascript permettant la réalisation d'une calculette dans la console.</p>-->
-                        </div>
-                    </div>
-                </div>
-                <div class="col-2">
-                    <h3 class="modal-title">Formation</h3>
-                    <p class="modal-text">
-
-                    </p>
-                    <h3 class="modal-title">Réalisation</h3>
-                    <p class="modal-text">
-
-                    </p>
-                    <h3 class="modal-title">Expérience & Recul sur la compétence</h3>
-                    <p class="modal-text">
+                        Lors de ce projet, j’ai réalisé une partie de l’application mobile ainsi que la majorité du Raspberry Pi, la première permettant d’afficher un historique des matchs enregistré ainsi que leurs impressions au format PDF. Pour plus de précision, cette partie consistait en une lecture de la base de données affichant ainsi la liste des matchs (date, heure, durée ainsi que les noms des joueurs et score final) ainsi qu’une page de détail affichant les points marqués dans leurs ordres d’arrivée (permettant ainsi de voir le score du match de n’importe quel moment, avec le compteur de temps du moment en question).
+                        La deuxième partie que j’ai réalisée consistait en la gestion de la sécurité, c’est-à-dire comment empêcher plusieurs personnes de se connecter en même temps au tableau et modifier le score. Pour ce faire, j’ai mis en place un point d’accès Wi-Fi ainsi qu’un serveur Django le tout sur une Raspberry Pi, permettant ainsi une double sécurité et une limitation du nombre de personnes pouvant interagir avec celui-ci, tout en évitant de possiblement bloquer l’afficheur (si le téléphone de l’arbitre tombe en panne par exemple) et j’ai développé le serveur afin de récupérer les scores envoyés par le téléphone et les traités pour qu’ils soient ensuite lisibles par l’afficheur 7 segments.
 
                     </p>
                 </div>
             </div>
         </div>
-    </div> <!--CHECK EAT -- TODO-->
+    </div> <!--MOBISCORE-->
 
 
     <div class="modal-container" id="modal-UPSACALENDAR">
@@ -566,7 +580,13 @@
                         <div>
                             <h1 class="modal-title">UPSA Calendar</h1>
                             <p class="modal-text">
+                                Réalisé en 2019, ce fut un projet commandité par UPSA, celui-ci avait pour but d’aider les secrétaires lors des prises de rendez-vous. En effet, étant une entreprise comportant de nombreux bâtiments et employés, les secrétaires possèdent alors une énorme quantité d’emploi du temps à gérer.
+                            </p>
 
+                            <br /><p class="modal-text">
+                                Compétences relatives à la réalisation :
+                                <u><a class="CS">C#</a></u>,
+                                <u><a class="AS">Agile Scrum</a></u>.
                             </p>
                         </div>
                         <div>
@@ -578,24 +598,72 @@
                     </div>
                 </div>
                 <div class="col-2">
-                    <h3 class="modal-title">Formation</h3>
+                    <h3 class="modal-title">Qu’est que « UPSA Calendar » ?</h3>
                     <p class="modal-text">
-
+                        UPSA Calendar, c’est un projet qui a pour objectif d’optimiser le temps de prise des rendez-vous et ainsi faire gagner du temps au secrétaire de l’entreprise UPSA, mais aussi à ceux et celles d’entreprises externes ayant une relation avec celle-ci. C’est une solution C# développée en MVVM (Model View ViewModel) sous la méthode d’organisation dite Agile. La valeur de ce projet en termes de temps gagné et de qualité de vie est inestimable : fini les complications pour trouver des créneaux ou des salles de disponibles, avec UPSA Calendar, les secrétaires ou toutes les infos nécessaires pour trouver en rendez-vous en moins de 30 secondes (créneaux pris par d’autres rendez-vous ainsi que les indisponibilités de chaque partie, la localisation des salles disponibles avec leurs créneaux, liste du matériel des salles en question (vidéo projecteur, tableau, etc.)).
                     </p>
-                    <h3 class="modal-title">Réalisation</h3>
+                    <h3 class="modal-title">Un projet de grande ampleur</h3>
                     <p class="modal-text">
-
+                        Commandité par UPSA (entreprise pharmaceutique) et relayé par M. P-A. TAULELLE, ce projet a été développé dans une équipe dirigée par M. Alexandre Nicolle, M. Nicolas Marin, M. Cyril JODAR, M. Tom Hallal ainsi que moi-même. Ce fut un projet de grande ampleur, car il devait compléter des fonctionnalités manquantes d’Outlook, et pour ce faire avais intégré une partie de l’API Graph de Microsoft (API utilisé par Outlook pour la prise de rendez-vous, en se basant sur ce qui s’appelle l’Active Directory, permettant ainsi de lier les compte Microsoft au rendez-vous et donc de synchroniser les agendas mobiles, ordinateurs et en ligne des utilisateurs). Pour que ce projet soit un succès, il a donc fallu intégrer un grand nombre de fonctionnalités que ce soit de la prise de rendez-vous selon les agendas des participants, ou bien les disponibilités des salles et leurs matériels afin de prendre celle qui conviendra le mieux aux organisateurs selon leurs besoins. Une fois fini, ce projet a été envoyé directement au commanditaire, mais nous n’avons malheureusement jamais eu de retour sur celui-ci. Étant donné que la majorité des fonctions de cet outil font désormais partie intégrante d’Outlook, nous pouvons supposer à raison qu’ils l’ont cessé de l’utiliser.
                     </p>
-                    <h3 class="modal-title">Expérience & Recul sur la compétence</h3>
+                    <h3 class="modal-title">Ma participation dans ce projet</h3>
                     <p class="modal-text">
+                        Lors de ce projet, j’ai réalisé la partie utilisant l’API Graph. Pour récapituler, cette partie avait pour but de synchroniser les rendez-vous pris dans l’outil avec les agendas des différents participants, permettant ainsi de prendre un créneau qui plaira à tous les participants, tout en réservant aussi la salle (la gestion du matériel est autre chose, celle-ci fait partie de l’application et non de l’API Graph).
+                        C’est lors de ce projet que j’ai découvert la puissance du C#, du WPF et de la méthode Agile. Le C# représentant le cœur de l’application, le WPF le visuel de celle-ci, et la méthode agile permettant une organisation centrée sur notre commanditaire.
 
                     </p>
                 </div>
             </div>
         </div>
-    </div> <!--UPSA CALENDAR -- TODO-->
+    </div> <!--UPSA CALENDAR-->
 
 
+    <div class="modal-container" id="modal-EPICERIE">
+        <div class="modal-background">
+            <div class="modal">
+                <div class="col-1">
+                    <div class="row">
+                        <div>
+                            <h1 class="modal-title">E-picerie</h1>
+                            <p class="modal-text">
+                                Projet fait en 2019, il a été réalisé en corrélation avec la MFR (Maison Familiale et Rurale) de la vallée du lot (situé à Castelmoron-sur-Lot). Ce projet avait pour but de réaliser une formation sur le e-commerce et la création de plateforme web d’e-commerce.
+                            </p>
+
+                            <br /><p class="modal-text">
+                                Compétences relatives à la réalisation :
+                                <u><a class="FORMATIONS">Formations</a></u>,
+                                <u><a class="POLY">Polyvalence</a></u>.
+                            </p>
+                        </div>
+                        <div>
+                            <div class="modal-div-picture">
+                                <img class="modal-picture" src="./assets/trans/example/mfr.png" />
+                            </div>
+                            <p class="modal-subtitle"> Photo de l'article de presse</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <h3 class="modal-title">Qu’est que « E-picerie » ?</h3>
+                    <p class="modal-text">
+                        E-picerie, c’est un projet dont l’objectif était de former des jeunes lycéens en MFR (Maison Familiale et Rurale) suivant le cursus Bac Pro Technicien Conseil Vente sur les différentes notions qui compose le e-commerce. Pour ce faire, nous avons eu des formations de pédagogie, afin d’être des formateurs capables de créer et faire de courtes formations. Ce projet était de grande importance, car suite à des changements du programme scolaire, le e-commerce faisait désormais partie intégrante de leur année scolaire. Pour ce faire, nous avons réalisé une formation de 10 heures répartie sur 5 créneaux, 3 en présentiel et 2 en distance.
+                    </p>
+                    <h3 class="modal-title">Une formation complète</h3>
+                    <p class="modal-text">
+                        Cette formation, demandée par Mme. Fresnais (directrice de l’établissement), a été préparée et mise en place par une équipe constitué de M. A. Nicolle, M. R. Leteurtre, M. G. Auriacombe ainsi que moi-même en tant que chef de projet. Très complète, elle contenait de nombreuses notions : les différents types de commerces (B2B, B2C, C2C), des notions importantes sur le e-commerce (règle des 3 clics, règle du 3 -30 -3, etc.), de nombreuses terminologies (fil d’ariane, M-commerce, etc.) ainsi que la réalisation d’un site web d’e-commerce sur la plateforme Wix. Une fois l’enseignement finis, nous avons mis en place une évaluation récapitulant la majorité des notions incorporées. Dans l’ensemble, nous avons eu un grand nombre de retours positifs, que ce soit des étudiants (dont la majorité ou validé le module), de la professeure ou bien de la direction.  Ces derniers ont d’ailleurs tant apprécié le projet qu’ils ont souhaité reprogrammer des nouvelles formations.
+                        Pendant la formation, nous avons eu le plaisir d’interagir avec l’équipe du journal « Sud-Ouest », qui a d’ailleurs réalisé <a class="link" href="https://www.sudouest.fr/lot-et-garonne/castelmoron-sur-lot/les-eleves-de-l-intech-a-la-mfr-2738311.php" target="_blank">un article</a> sur notre travail.
+                    </p>
+                    <h3 class="modal-title">Ma participation dans ce projet</h3>
+                    <p class="modal-text">
+                        Durant ce projet, j’ai réalisé une partie des évaluations. Pour ce faire, j’avais dû mettre en place les questions, ainsi que les différentes grilles de notations qui ont été ensuite utilisées pour noter les élèves. L’évaluation était séparée en deux parties distinctes, la première contenait tout le théorique, c’est-à-dire de nombreuses définitions, des termes et des notions importantes tandis que la deuxième consistait en une réalisation d’un petit site web d’e-commerce sur l’outil Wix, afin de mettre en pratique les terminologies et notions utilisées juste avant.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div> <!--EPICERIE -- TODO - link-->
+    
+    
+    
     <!--TECH-->
 
     <div class="modal-container" id="modal-JS">
@@ -606,11 +674,12 @@
                         <div>
                             <h1 class="modal-title">JavaScript</h1>
                             <p class="modal-text">
-                                Le JavaScript est un langage de développement principalement côté client et disponible sur toutes les plateformes.
-                                Il est très connu dû à sa présence massive sur internet via la majorité des sites web connus (Google, Youtube, Facebook, Twitter, Reddit, et bien d’autres !).
-                                Il est souvent utilisé avec d’autres framework complémentaire (VueJS, Angular, etc) afin d’améliorer certaines facettes (VueJS, angular, React, jquery et bien d’autres).
-                                C’est un langage qui malgré son grand âge (créée en 1995) est toujours maintenue au gout du jour, que ce soit lui-même (ES2021 en juin 2021) ou bien ses framework (vue 3.2.7 en juin 2022).
-                                C’est le langage de développement le plus utilisé au monde (selon le HackerRank 2020) et aussi le langage que j’ai le plus utilisé.
+                                Le JavaScript est un langage de développement principalement côté client et disponible sur toutes les plateformes. Il est très connu dû à sa <b>présence massive sur internet</b> via la majorité des sites web connus (Google, YouTube, Facebook, Twitter, Reddit, et bien d’autres !). Il est souvent utilisé avec d’autres framework complémentaire (VueJS, Angular, etc.) afin d’améliorer certaines facettes (VueJS, Angular, React, jQuery et bien d’autres). C’est un langage qui malgré son grand âge (créé en 1995) est toujours maintenu au goût du jour, que ce soit lui-même (ES2021 en juin 2021) ou bien ses framework (vue 3.2.7 en juin 2022). <b>C’est le langage de développement le plus utilisé au monde</b> (selon le HackerRank 2020) et aussi le langage que j’ai le plus utilisé.
+                            </p>
+
+                            <br /><p class="modal-text">
+                                Réalisation relative à la compétence :
+                                <u><a class="MCUSYS">McuSys</a></u>.
                             </p>
                         </div>
                         <div>
@@ -624,24 +693,24 @@
                 <div class="col-2">
                     <h3 class="modal-title">Formation</h3>
                     <p class="modal-text">
-                        C'est ma technologie la plus étudiée à ce jour (avec près de 3 ans d’expérience), et je souhaite toujours m'améliorer à ce sujet pour faire des choses encore plus poussées (gestion de 3D sur le visuel, avec affichage toujours plus poussé et immersif).
-                        J’ai commencé à l’apprendre lors de ma formation à IN’TECH et j’ai continué d’approfondir mes connaissances sur cette technologie à travers les multiples projets que j’ai réalisé, qu’ils soient scolaires ou professionnels.
-                        J’ai aussi utilisé beaucoup de modules et de framework sur cette technologie afin d’explorer celle-ci en profondeur (VueJS et Angular en framework, et une très grande quantité de module comme ChartJs, ChartKick , VueTreeSelect et bien d’autres)
+                        C'est ma <b>technologie la plus étudiée à ce jour (avec près de 3 ans d’expérience)</b>, et je souhaite toujours m'améliorer à ce sujet pour faire des choses encore plus poussées (gestion de 3D sur le visuel, avec affichage toujours plus poussé et immersif).
+                        J’ai commencé à l’apprendre lors de ma formation à IN’TECH et j’ai continué d’approfondir mes connaissances sur cette technologie à travers les multiples projets que j’ai réalisés, qu’ils soient scolaires ou professionnels.
+                        J’ai aussi utilisé beaucoup de modules et de framework sur cette technologie afin d’explorer celle-ci en profondeur (<b>VueJS et Angular</b> en framework, et une très grande quantité de module comme <b>ChartJs, ChartKick , VueTreeSelect et bien d’autres</b>)
                         Il est important de noter que j'ai beaucoup travaillé en programmation orientée objet (POO) avec ce langage.
+
                     </p>
                     <h3 class="modal-title">Réalisation</h3>
                     <p class="modal-text">
-                        C'est la technologie que j'ai le plus l'habitude d'utiliser, notamment avec son framework VueJS. C'est avec celle-ci que j’ai développé une majeure partie du visuel du projet MCUSys, par exemple pour afficher les vannes d'arrosage, il fallait pouvoir rajouter une ligne par vanne, ceci était donc réaliser avec du JavaScript et du VueJS pour adapter le visuel aux éléments.
-                        C'est aussi avec ceux-ci que j'ai réalisé des taches simples,
-                        comme l’affichage de boutons de manières conditionnels mais aussi de nombreuses taches plus difficile comme la création de multiples graphiques pour faciliter la lecture des données de l’historique ainsi que de la météo à l'utilisateur en utilisant les modules ChartJs et ChartKick,
-                        permettant l’affichage d’un graphique contenant plusieurs courbe avec chacune leurs propres axe Y, ou encore pour dessiner et afficher de manière programmable des synoptiques complexe réalisé en SVG afin d’avoir une représentation la plus exacte possible des éléments composant l’installation d’un client.
+                        C'est la technologie que j'ai le plus l'habitude d'utiliser, notamment avec son framework VueJS. C'est avec celle-ci que j’ai développé une majeure partie du visuel du projet MCUSys, par exemple pour afficher les vannes d'arrosage, il fallait pouvoir rajouter une ligne par vanne, celle-ci étaient donc réalisé avec du JavaScript et du VueJS pour adapter le visuel aux éléments.
+                        C'est aussi avec ceux-ci que j'ai réalisé des taches simples, comme l’affichage de boutons de manières conditionnels mais aussi de nombreuses taches plus difficile comme la création de multiples graphiques pour faciliter la lecture des données de l’historique ainsi que de la météo à l'utilisateur en utilisant les modules ChartJs et ChartKick, permettant l’affichage d’un graphique contenant plusieurs courbe avec chacune leurs propres axe Y, ou encore pour dessiner et afficher de manière programmable des synoptiques complexe réalisé en SVG afin d’avoir une représentation la plus exacte possible des éléments composant l’installation d’un client.
+
                     </p>
                     <h3 class="modal-title">Expérience & Recul sur la compétence</h3>
                     <p class="modal-text">
-                        C’est une technologie que j’apprécie beaucoup dû à ses grands degrés de liberté. En effet tout est possible en JavaScript mais cela à son coût : il arrive souvent que certains aspects de celui-ci soit étrange voir confusant ! Par exemple, si l’on assigne une variable contenant un objet en utilisant une autre (ex : a = b) alors a sera une copie de b et inversement, c’est-à-dire que si l’on modifie a, cela modifiera aussi b ! Pour résoudre ce problème, il faut en fait faire Object.assign(a,b), ce qui assignera les différentes propriété de b à a sans pour autant lier les deux objets.
-                        Aussi, étant une technologie web, elle est souvent difficile à débugué (pas de débugger intégré, il faut passer par celui du navigateur qui selon les mises à jour peux ne plus marcher avec le Framework utilisé, comme c’est arrivé récemment avec Chrome/Firefox et VueJS).
-                        Dans le cadre de VueJS, je ne peux que vous conseiller l’extension pour navigateur « Vue.js devtools », permettant principalement d’afficher les variables et leurs valeurs de chaque composant visuel.
-                        Pour finir, je pense être suffisamment performant pour réaliser un site web à destination professionnel sans problème.
+                        C’est une technologie que j’apprécie beaucoup dû à ses grands degrés de liberté. En effet, tout est possible en JavaScript, mais cela à son coût : il arrive souvent que certains aspects de celui-ci soient étranges voir confusants ! Par exemple, si l’on assigne une variable contenant un objet en utilisant une autre (ex : a = b) alors a sera une copie de b et inversement, c’est-à-dire que si l’on modifie à, cela modifiera aussi b ! Pour résoudre ce problème, il faut en fait faire Object.assign(a, b), ce qui assignera les différentes propriétés de b à a sans pour autant lier les deux objets.
+                        Aussi, étant une technologie web, elle est souvent difficile à débugué (pas de débugger intégrer, il faut passer par celui du navigateur qui selon les mises à jour peut ne plus marcher avec le Framework utilisé, comme c’est arrivé récemment avec Chrome/Firefox et VueJS).
+                        Dans le cadre de VueJS, je ne peux que vous conseiller l’extension pour navigateur « Vue.js devtools », permettant principalement d’afficher les variables et leurs valeurs de chaque composant visuel. Pour finir, je pense être suffisamment performant pour réaliser un site web à destination professionnel sans problème.
+
                     </p>
                 </div>
             </div>
@@ -658,8 +727,13 @@
                             <h1 class="modal-title">PHP</h1>
                             <p class="modal-text">
                                 PHP est une technologie serveurs permettant de gérer des serveurs web apache.
-                                Elle est mondialement connue et <a class="link" target="_blank" href="https://w3techs.com/technologies/details/pl-php">utilisé par un très grand nombre de site majeures</a> (comme par exemple Facebook, Wikipédia ou encore zoom).
-                                Il permet donc la communication entre un ordinateur dit client et un serveur, en envoyant les informations relatives aux pages à celui-ci. Par exemple, dans le cas d’un site web php, la page HTML ainsi que le visuel en CSS et les scripts JS sont envoyé par le serveur apache selon la page ou vous êtes.
+                                Elle est mondialement connue et <a class="link" target="_blank" href="https://w3techs.com/technologies/details/pl-php"> utilisée par un très grand nombre de sites majeures</a> (comme par exemple Facebook, Wikipédia ou encore zoom).
+                                Il permet donc la communication entre un ordinateur dit client et un serveur, en envoyant les informations relatives aux pages à celui-ci. Par exemple, dans le cas d’un site web PHP, la page HTML ainsi que le visuel en CSS et les scripts JS sont envoyés par le serveur apache selon la page où vous êtes.
+                            </p>
+
+                            <br /><p class="modal-text">
+                                Réalisation relative à la compétence :
+                                <u><a class="MCUSYS">McuSys</a></u>.
                             </p>
                         </div>
                         <div>
@@ -673,16 +747,17 @@
                 <div class="col-2">
                     <h3 class="modal-title">Formation</h3>
                     <p class="modal-text">
-                        J’ai commencé à apprendre cette technologie lors de mon semestre deux à l’école IN’TECH, durant lequel j’ai réalisé un site web pour une mairie ainsi que ses 2 plus grosses associations. J’ai ensuite continué de mon former au travers de mon alternance, ou j’ai pus travailler sur le projet McuSYS et ainsi m’améliorer sur cette technologie, en créant une API via le framework API Plateform ainsi que Symfony capable de répondre a de nombreuse requête que le coté client pourrait demander.
+                        J’ai commencé à apprendre cette technologie lors de mon semestre deux à l’école IN’TECH, durant lequel j’ai réalisé un site web pour une mairie ainsi que ses 2 plus grosses associations. J’ai ensuite continué de mon former au travers de mon alternance, ou j’ai pu travailler sur le projet MCUSys et ainsi m’améliorer sur cette technologie, en créant une API via le framework API Plateform ainsi que Symfony capable de répondre à de nombreuses requêtes que le coté client pourrait demander.
                     </p>
                     <h3 class="modal-title">Réalisation</h3>
                     <p class="modal-text">
-                        Je me suis servi de cette technologie tout au long des projets web MCUSys ainsi que sa deuxième version, car ceux-ci étaient développé respectivement en PHP pure et avec Symfony (module qui rajoute des fonctionnalités au PHP et en facilite beaucoup d’autres). Je me suis servi de cette technologie afin de pré charger les données au site web, pour éviter d’avoir une page blanche pendant un très court instant.
+                        Je me suis servi de cette technologie tout au long des projets web MCUSys ainsi que sa deuxième version, car ceux-ci étaient développés respectivement en PHP pur et avec Symfony (module qui rajoute des fonctionnalités au PHP et en facilite beaucoup d’autres). Je me suis servi de cette technologie afin de précharger les données au site web, pour éviter d’avoir une page blanche pendant un très court instant.
                     </p>
                     <h3 class="modal-title">Expérience & Recul sur la compétence</h3>
                     <p class="modal-text">
-                        Aussi, grâce à l’expérience que j’ai à ce jour je peux vous conseiller si vous vous servez de PHP de mettre votre serveur web et son ensemble sur une machine linux si possible, même pour le développement ! En effet après recherches j’ai trouvé que les transferts de données entre une base de données et le serveur est beaucoup plus lent sur Windows que sur linux (dans notre cas, nous étions passé de 2 secondes de transfert à 15 millisecondes !). Pour ce faire, vous aurez besoin de créer d’installer WSL sur votre machine Windows.
-                        Enfin, je pense que malgré tout le travail réalisé sur cette technologie, j’ai encore beaucoup à apprendre que cela soit sur le langage de base ou Symfony, comme par exemple réaliser des transferts d’objet de PHP vers un client JS de manières plus simplifiées qu’en redécoupant l’objet de manières générique.
+                        Aussi, grâce à l’expérience que j’ai à ce jour, je peux vous conseiller si vous vous servez de PHP de mettre votre serveur web et son ensemble sur une machine linux si possible, même pour le développement ! En effet après recherches j’ai trouvé que les transferts de données entre une base de données et le serveur est beaucoup plus lent sur Windows que sur linux (dans notre cas, nous étions passés de 2 secondes de transfert à 15 millisecondes !). Pour ce faire, vous aurez besoin de créer d’installer WSL sur votre machine Windows.
+                        Enfin, je pense que malgré tout le travail réalisé sur cette technologie, j’ai encore beaucoup à apprendre que cela soit sur le langage de base ou Symfony, comme par exemple réaliser des transferts d’objet de PHP vers un client JS de manières plus simplifiées qu’en redécoupant l’objet de manière générique.
+
                     </p>
                 </div>
             </div>
@@ -698,9 +773,15 @@
                         <div>
                             <h1 class="modal-title">Python</h1>
                             <p class="modal-text">
-                                Très souvent utilisé dans diverse domaine, Python est un langage très libre, car il permet de faire à peu près tout et n’importe quoi, que ce soit de l’IA (TensorFlow, PyTorch) au sites web (Django, Flask) python est présent dans pratiquement tous nos appareils sans que nous nous en rendions compte. C’est un langage qui possède ses avantages comme par exemple une syntaxe très proche de l’anglais et donc très facile à apprendre, mais aussi ses défauts, notamment sa vitesse d’exécution dû au fait qu’il soit un langage interprété.
-                                Tout cela fait de python un langage très intéressant à apprendre et surtout très agréable à utiliser, même si parfois certains modules peuvent s'avérer difficile à prendre en main (je pense tout particulièrement à etree, que j’avais utilisé lors de la réalisation VSTT)
+                                Très souvent utilisé dans diverses domaines, Python est un langage très libre, car il permet de faire à peu près tout et n’importe quoi, que ce soit de l’IA (TensorFlow, PyTorch) au sites web (Django, Flask) python est présent dans pratiquement tous nos appareils sans que nous ne nous en rendions compte. C’est un langage qui possède ses avantages comme par exemple une syntaxe très proche de l’anglais et donc très facile à apprendre, mais aussi ses défauts, notamment sa vitesse d’exécution due au fait qu’il soit un langage interprété.
+                                Tout cela fait de python un langage très intéressant à apprendre et surtout très agréable à utiliser, même si parfois certaines choses peuvent s'avérer difficile à prendre en main (je pense tout particulièrement à Django et les environnements virtuels)
 
+
+                            </p>
+
+                            <br /><p class="modal-text">
+                                Réalisation relative à la compétence :
+                                <u><a class="MOBISCORE">Mobiscore</a></u>.
                             </p>
                         </div>
                         <div>
@@ -715,24 +796,18 @@
                     <h3 class="modal-title">Formation</h3>
                     <p class="modal-text">
 
-                        J'ai eu une formation sur ce langage lors de mon 7eme semestre, ou nous avons vu la création de serveur python, mais aussi son utilisation en tant que langage de manière plus générale, 
-                        comme par exemple en l’utilisant pour créer des petits utilitaires démarrant directement depuis la console. 
-                        Aussi, j’ai appris par moi-même durant mon 4eme semestre à réaliser un serveur web Django sur un Raspberry pi, ou encore plus récemment avec l’utilisation de la librairie etree, 
-                        permettant la réalisation de fichier XML ou CSV depuis python.
+                        J'ai eu une formation sur ce langage lors de mon 7e semestre, ou nous avons vu la création de serveur python, mais aussi son utilisation en tant que langage de manière plus générale, comme par exemple en l’utilisant pour créer des petits utilitaires démarrant directement depuis la console. Aussi, j’ai appris par moi-même durant mon 4e semestre à réaliser un serveur web Django sur une Raspberry pi, ou encore plus récemment avec l’utilisation de la librairie etree, permettant la réalisation de fichier XML ou CSV depuis python.
 
                     </p>
                     <h3 class="modal-title">Réalisation</h3>
                     <p class="modal-text">
 
-                        Je m’étais aussi servis de ce langage dans un projet d’étude, ou une application mobile devait pouvoir se connecter à un Raspberry Pi en wifi et communiquer au serveur web de celle-ci des informations en direct live, afin de permettre une gestion du score des matchs de squash avec un grands panneau 7 segments. Pour cela j’avais d’ailleurs suivi les formations de Django disponible sur le web. Aussi, j’ai appris avec l’aide d’un ami à utiliser le module etree, permettant de créer le programme VSTT, disponible sur mon git. Celui-ci a pour but de convertir des fichiers de traductions utilisé par Vue i18n ou Symfony en fichier CSV plus facilement utilisables pour des traducteurs, puis de pouvoir convertir les-dit CSV dans le format nécessaire.
+                        Je m’étais aussi servi de ce langage dans un projet d’étude, ou une application mobile devait pouvoir se connecter à un Raspberry Pi en wifi et communiquer au serveur web de celle-ci des informations en direct live, afin de permettre une gestion du score des matchs de squash avec un grand panneau 7 segments. Pour cela, j’avais d’ailleurs suivi les formations de Django disponible sur le web. Aussi, j’ai appris avec l’aide d’un ami à utiliser le module etree, permettant de créer le programme VSTT, disponible sur mon git. Celui-ci a pour but de convertir des fichiers de traductions utilisé par Vue i18n ou Symfony en fichier CSV plus facilement utilisables pour des traducteurs, puis de pouvoir convertir les dit CSV dans le format nécessaire.
 
                     </p>
                     <h3 class="modal-title">Expérience & Recul sur la compétence</h3>
                     <p class="modal-text">
-                        Cette une technologie que j’apprécie, sa grande liberté lui accorde un potentiel incroyable, permettant ainsi de créer des choses simples 
-                        (calculette, ou petit serveur communicant avec un client) comme des choses bien plus complexe (site web complet, intelligence artificielle, 
-                        gestion et conversion de fichier à la demande). Le seul défaut que je trouve à se langage est un de ses particularité : il ne tolère pas les tabulations, 
-                        il faut donc mettre des espaces pour organiser son code. Ce petit défaut, bien que très désagréable, peut facilement être corrigé avec le bon environnement de développement.
+                        C’est une technologie que j’apprécie, sa grande liberté lui accorde un potentiel incroyable, permettant ainsi de créer des choses simples (calculette, ou petit serveur communicant avec un client) comme des choses bien plus complexe (site web complet, intelligence artificielle, gestion et conversion de fichier à la demande). Le seul défaut que je trouve à ce langage est une de ses particularités : il ne tolère pas les tabulations, il faut donc mettre des espaces pour organiser son code. Ce petit défaut, bien que très désagréable, peut facilement être corrigé avec le bon environnement de développement.
 
                     </p>
                 </div>
@@ -750,9 +825,15 @@
                             <h1 class="modal-title">WLangage</h1>
                             <p class="modal-text">
                                 Le WLangage est un langage propriétaire à PC soft (WinDev, WebDev, WinDev mobile). C’est un langage très atypique utilisé très majoritairement en France et en Chine.
-                                C’est un langage avec une syntaxe particulière qui a eu beaucoup de visibilité à une époque dû à un grand nombre de publicité à la télévision et sur internet.
-                                Chaque interface de développement utilisant ce langage a une particularité : il est impossible de programmer l’affichage. En effet celui-ci ce fait entièrement en visuel direct, c’est-à-dire que vous pouvez directement placer des boutons sur l’affichage en glisser déposé. Ceci peut vite poser problème pour un utilisateur débutant qui ne saurait pas gérer toutes les options de l’outil de développement.
+                                C’est un langage avec une syntaxe particulière qui a eu beaucoup de visibilité à une époque due à un grand nombre de publicité à la télévision et sur internet.
+                                Chaque interface de développement utilisant ce langage a une particularité : il est impossible de programmer l’affichage. En effet, celui-ci se fait entièrement en visuel direct, c’est-à-dire que vous pouvez directement placer des boutons sur l’affichage en glisser déposer. Ceci peut vite poser problème pour un utilisateur débutant qui ne saurait pas gérer toutes les options de l’outil de développement.
 
+
+                            </p>
+
+                            <br /><p class="modal-text">
+                                Réalisation relative à la compétence :
+                                <u><a class="NETSYS">NETSYS</a></u>.
                             </p>
                         </div>
                         <div>
@@ -766,7 +847,7 @@
                 <div class="col-2">
                     <h3 class="modal-title">Formation</h3>
                     <p class="modal-text">
-                        N’ayant jamais utilisé cette technologie avant, je suis autodidacte. En effet j’ai appris les bases via le livre d’auto-formation fournis avec le logiciel WebDev, ainsi que de multiples sources en lignes et l’assistance de mon maitre de stage, qui avait quant à lui plus de 10 ans d’expérience avec cette technologie.
+                        N’ayant jamais utilisé cette technologie avant, je suis autodidacte. En effet, j’ai appris les bases via le livre d’auto-formation fourni avec le logiciel WebDev, ainsi que de multiples sources en lignes et l’assistance de mon maître de stage, qui avait quant à lui plus de 10 ans d’expérience avec cette technologie.
                     </p>
                     <h3 class="modal-title">Réalisation</h3>
                     <p class="modal-text">
@@ -774,8 +855,9 @@
                     </p>
                     <h3 class="modal-title">Expérience & Recul sur la compétence</h3>
                     <p class="modal-text">
-                        Suite à ces 6 mois de travail avec cette technologie, je me considère comme étant habitué avec celle-ci, que ce soit ses particularités (la création de visuelle, la gestion long-terme du projet) ou ses basiques (syntaxe, utilisation de l’interface de développement propriétaire obligatoire) et ainsi prêt à mettre cette compétence a l’utilisation dans le cadre d’un futur emploi.
-                        Pour conclure je pense que c’est une bonne technologie dans l’ensemble cependant selon la plateforme, elle nous limite vite en terme de performance. En effet, sur navigateur avec WebDev elle a tendance à avoir une très mauvaise gestion du visuel - elle génère le visuel sous forme de tableau imbriqué entre eux - . Je conseillerai donc de prendre une autre technologie si vous souhaitez faire un programme optimisé dans ce domaine.
+                        Suite à ces 6 mois de travail avec cette technologie, je me considère comme étant habitué avec celle-ci, que ce soient ses particularités (la création de visuelle, la gestion long-terme du projet) ou ses basiques (syntaxe, utilisation de l’interface de développement propriétaire obligatoire) et ainsi prêt à mettre cette compétence à l’utilisation dans le cadre d’un futur emploi.
+                        Pour conclure, je pense que c’est une bonne technologie dans l’ensemble cependant selon la plateforme, elle nous limite vite en termes de performance. En effet, sur navigateur avec WebDev, elle a tendance à avoir une très mauvaise gestion du visuel - elle génère le visuel sous forme de tableau imbriqué entre eux -. Je conseillerai donc de prendre une autre technologie si vous souhaitez faire un programme optimisé dans ce domaine.
+
                     </p>
                 </div>
             </div>
@@ -791,12 +873,15 @@
                         <div>
                             <h1 class="modal-title">Java</h1>
                             <p class="modal-text">
-                                Le Java est une technologie très utilisée dans le monde car elle permet la création d’interface web, mais aussi d’application mobile et plus simplement de logiciel bureau.
-                                Par exemple, la plupart des applications Android sont développé en Java.
-                                Les possibilités données par cette technologie sont la source de nombreuses créations connues dans le monde, que ce soit dans le spatial
+                                Le Java est une technologie très utilisée dans le monde, car elle permet la création d’interface web, mais aussi d’application mobile et plus simplement de logiciel bureau. Par exemple, la plupart des applications Android sont développé en Java. Les possibilités données par cette technologie sont la source de nombreuses créations connues dans le monde, que ce soit dans le spatial
                                 (<a class="link" target="_blank" href="https://worldwind.arc.nasa.gov/">NASA WorldWind</a>, <a class="link" target="_blank" href="https://en.wikipedia.org/wiki/Maestro_(software)">Maestro Mars Rover</a>),
                                 dans l’intelligence artificiel (<a class="link" target="_blank" href="https://h2o.ai/">H2O.ai</a>)
                                 ou encore dans le divertissement (<a class="link" target="_blank" href="https://www.minecraft.net/en-us/store/minecraft-java-bedrock-edition-pc">Minecraft</a>).
+                            </p>
+
+                            <br /><p class="modal-text">
+                                Réalisation relative à la compétence :
+                                <u><a class="MOBISCORE">Mobiscore</a></u>.
                             </p>
                         </div>
                         <div>
@@ -810,18 +895,20 @@
                 <div class="col-2">
                     <h3 class="modal-title">Formation</h3>
                     <p class="modal-text">
-                        Technologie que j’ai découverte durant mon enfance, je l’ai appris lors d’une année à l’établissement d’enseignement supérieur IN’TECH AGEN, durant lequel j’ai eu des cours sur la technologie mais aussi deux projets, une d’application mobile et une d’API (Application Programming Interface) web. Durant ceux-ci j’ai respectivement appris à développer une application mobile Android natif, ainsi que la création d’une API Rest en Java pur (donc pas de framework type Spring).
+                        Technologie que j’ai découverte durant mon enfance, je l’ai appris lors d’une année à l’établissement d’enseignement supérieur IN’TECH AGEN, durant lequel j’ai eu des cours sur la technologie, mais aussi deux projets : une d’application mobile et une d’API (Application Programming Interface) web. Durant ceux-ci, j’ai respectivement appris à développer une application mobile Android natif, ainsi que la création d’une API Rest en Java pur (donc pas de framework type Spring).
                     </p>
                     <h3 class="modal-title">Réalisation</h3>
                     <p class="modal-text">
-                        Durant le premier projet, j’ai réalisé un compteur respectant les règles du sport pour les arbitres de squash afin qu’ils puissent facilement et rapidement prendre notes des points, le tout relié à un compteur sept segments. J’ai principalement participé à la partie communication entre les deux parties mais aussi l’export des résultats des matchs (score global, ordre des points, temps).
-                        Pour le deuxième, j’ai dû faire une API permettant la communication entre une application mobile ou bureau et une base de données. Elle a été réaliser selon l’architecture REST (REpresentational State Transfer). J’ai réalisé l’entièreté de celle-ci seul pendant que mes collègues travaillés sur les applications mobile et bureau.
+                        Durant le premier projet, j’ai réalisé un compteur respectant les règles du sport pour les arbitres de squash afin qu’ils puissent facilement et rapidement prendre note des points, le tout relié à un compteur sept segments. J’ai principalement participé à la partie communication entre les deux parties, mais aussi l’export des résultats des matchs (score global, ordre des points, temps).
+                        Pour le deuxième, j’ai dû faire une API permettant la communication entre une application mobile ou bureau et une base de données. Elle a été réalisée selon l’architecture REST (REpresentational State Transfer). J’ai réalisé l’entièreté de celle-ci seul pendant que mes collègues travaillés sur les applications mobiles et bureaux.
+
 
                     </p>
                     <h3 class="modal-title">Expérience & Recul sur la compétence</h3>
                     <p class="modal-text">
-                        Avec ces deux projets ainsi que les différents cours sur cette technologie que j’ai reçu, je pense être bon dans celle-ci car j’ai vu et réaliser une grande diversité de choses avec ce langage, me permettant donc de m’adapter plus facilement à n’importe quelle requête.
+                        Avec ces deux projets ainsi que les différents cours sur cette technologie que j’ai reçus, je pense être bon dans celle-ci car j’ai vu et réaliser une grande diversité de choses avec ce langage, me permettant donc de m’adapter plus facilement à n’importe quelle requête.
                         C’est une technologie que j’apprécie tout particulièrement dû à sa simplicité d’apprentissage malgré une grande profondeur, mais aussi dû au fait que ce soit l’un des premiers langages de programmation que j’ai découvert, au travers d’un jeu de mon enfance : Minecraft.
+
 
                     </p>
                 </div>
@@ -838,11 +925,15 @@
                         <div>
                             <h1 class="modal-title">CSharp</h1>
                             <p class="modal-text">
-                                C# est une technologie créer et maintenu par Microsoft en 2000 et qui est depuis maintenant quelques années devenues libre.
-                                Ce langage est connu et est utilisé dans de multiples cas, comme par exemple la création d’application mobile compatible Android et iPhone (Xamarin), mais aussi la création de jeux vidéo complet au travers du moteur Unity (
-                                <a class="link" target="_blank" href="https://trends.google.fr/trends/explore?geo=FR&q=%2Fm%2F0dmyvh,%2Fg%2F11qpzy882z,%2Fm%2F04sh_j_,%2Fm%2F025wnp,%2Fm%2F0_x6l2s">qui est l’un des moteurs de jeu les plus connues au monde </a>).
-                                Aussi il possède un avantage de poids comparé à ses concurrents, c’est que la bibliothèque de classe du .net est extrêmement riche et très bien documentée, facilitant ainsi énormément la tache au jeunes développeurs (en effet, il n’y a pas besoin de chercher sur internet dans la majorité des cas : survolé une méthode ou une fonction vous dira directement : ce qu’elle renvoie, ce qu’elle prend en paramètre, ainsi que ce à quoi elle sert précisément.
+                                C# est une technologie créée et maintenue par Microsoft en 2000 et qui est depuis maintenant quelques années devenues libre. Ce langage est connu et est utilisé dans de multiples cas, comme par exemple la création d’application mobile compatible Android et iPhone (Xamarin), mais aussi la création de jeux vidéo complets au travers du moteur Unity  (
+                                <a class="link" target="_blank" href="https://trends.google.fr/trends/explore?geo=FR&q=%2Fm%2F0dmyvh,%2Fg%2F11qpzy882z,%2Fm%2F04sh_j_,%2Fm%2F025wnp,%2Fm%2F0_x6l2s">qui est l’un des moteurs de jeu les plus utilisé au monde</a>).
+                                Aussi, il possède un avantage de poids comparé à ses concurrents : la bibliothèque de classe du .net est extrêmement riche et très bien documentée, facilitant ainsi énormément la tâche aux jeunes développeurs (en effet, il n’y a pas besoin de chercher sur internet dans la majorité des cas : survoler une méthode ou une fonction vous dira directement : ce qu’elle renvoie, ce qu’elle prend en paramètre, ainsi que ce à quoi elle sert précisément.
 
+                            </p>
+
+                            <br /><p class="modal-text">
+                                Réalisation relative à la compétence :
+                                <u><a class="UPSACALENDAR">UPSA Calendar</a></u>.
                             </p>
                         </div>
                         <div>
@@ -856,27 +947,27 @@
                 <div class="col-2">
                     <h3 class="modal-title">Formation</h3>
                     <p class="modal-text">
-                        J’ai appris ce langage lors de mon semestre 3 a l’école IN’TECH ou j’ai réalisé en équipe une application C# WPF en connexion avec l’api GRAPH de Microsoft durant un semestre.
-                        Vers la fin de mes études, j’ai eu des formations de M. Malacrino afin d’apprendre le C# au travers de Xamarin (framework permettant la création d’application mobile compatible Android et iPhone) ainsi qu’ASP.NET (framework permettant la création de site web ainsi que d’API REST).
+                        J’ai appris ce langage lors de mon semestre 3 à l’école IN’TECH ou j’ai réalisé en équipe une application C# WPF en connexion avec l’api GRAPH de Microsoft durant un semestre. Vers la fin de mes études, j’ai eu des formations de M. Malacrino afin d’apprendre le C# au travers de Xamarin (framework permettant la création d’application mobile compatible Android et iPhone) ainsi qu’ASP.NET (framework permettant la création de site web ainsi que d’API REST).
 
                     </p>
                     <h3 class="modal-title">Réalisation</h3>
                     <p class="modal-text">
-                        J’ai réalisé pour l’entreprise UPSA en équipe une application C# utilisant l’API Graph de Microsoft (celle-ci permet de récupérer diverses informations d’Outlook, comme par exemple les disponibilité d’une personne, ou bien de lui assigner une invitation à un rendez-vous) afin de créer une application permettant une gestion facilité des rendez-vous, notamment en donnant la possibilité de voir les emplacements libres dans l’agenda d’une personne, sans pour autant savoir pourquoi d’autres ne le sont pas (et ainsi gardé une certaine privacité de ses activités).
-                        J’ai aussi dans le cadre de ma formation crée de multiples applications mobiles (Xamarin) et API (ASPNET).
+                        J’ai réalisé pour l’entreprise UPSA en équipe une application C# utilisant l’API Graph de Microsoft (celle-ci permet de récupérer diverses informations d’Outlook, comme par exemple les disponibilités d’une personne, ou bien de lui assigner une invitation à un rendez-vous) afin de créer une application permettant une gestion facilitée des rendez-vous, notamment en donnant la possibilité de voir les emplacements libres dans l’agenda d’une personne, sans pour autant savoir pourquoi d’autres ne le sont pas (et ainsi gardé une certaine privacité de ses activités). J’ai aussi dans le cadre de ma formation crée de multiples applications mobiles (Xamarin) et API (ASPNET).
                     </p>
                     <h3 class="modal-title">Expérience & Recul sur la compétence</h3>
                     <p class="modal-text">
                         C’est un langage que j’apprécie dans l’ensemble et où je me considère plutôt à l’aise, même s’il me reste encore beaucoup à apprendre sur celui-ci.
-                        Je pense que le C# est un langage ayant encore beaucoup d’avenir devant lui malgré sa réputation dû à une promiscuité avec Microsoft durant une longue période, car il est dans l’ensemble très utilisé que ce soit à travers des framework (Unity, Xamarin) ou bien car des entreprises s’en servent du langage dans leurs programmes ou de son framework sur lequel il est basée : .NET (Stackoverflow, Intel).
+                        Je pense que le C# est un langage ayant encore beaucoup d’avenir devant lui malgré sa réputation dû à une promiscuité avec Microsoft durant une longue période, car il est dans l’ensemble très utilisé que ce soit à travers des framework (Unity, Xamarin) ou bien car des entreprises s’en servent du langage dans leurs programmes ou de son framework sur lequel il est basé : .NET (Stackoverflow, Intel).
+
 
                     </p>
                 </div>
             </div>
         </div>
     </div> <!--CSHARP -->
-
-
+    
+    
+    
     <!--COMP-->
 
     <div class="modal-container" id="modal-FORMATIONS">
@@ -888,8 +979,14 @@
                             <h1 class="modal-title">Formations</h1>
                             <p class="modal-text">
 
-                                Lors de mes études, j’ai pu participer à la formation d’une poignée de jeunes à la MFR de Castelmoron-sur-Lot en les formants au e-commerce répartit sur 6 cours et voyant toutes les dimensions de ce sujet (que ce soit le vocabulaire, la théorie ou bien la pratique avec la création de site exemple via des outils comme Wix). Sujet tout particulièrement pertinent car il est de plus en plus utilisé à travers le monde par les professionnels pour vendre leurs produits (Amazon est par exemple un site très prisé pour ceci).
+                                Lors de mes études, j’ai pu participer à la formation d’une poignée de jeunes à la MFR de Castelmoron-sur-Lot en les formants au e-commerce réparti sur 6 cours et voyants toutes les dimensions de ce sujet (que ce soit le vocabulaire, la théorie ou bien la pratique avec la création de site exemple via des outils comme Wix). Sujet tout particulièrement pertinent car il est de plus en plus utilisé à travers le monde par les professionnels pour vendre leurs produits (Amazon est par exemple un site très prisé pour ceci).
 
+                            </p>
+
+                            <br /><p class="modal-text">
+                                Réalisations relatives à la compétence :
+                                <u><a class="NETSYS">NETSYS</a></u>,
+                                <u><a class="EPICERIE">E-picerie</a></u>.
                             </p>
                         </div>
                         <div>
@@ -903,17 +1000,18 @@
                 <div class="col-2">
                     <h3 class="modal-title">Formation</h3>
                     <p class="modal-text">
-                        Pour cette compétence j’ai dû apprendre comment donner un cours de manière intéressante et pertinente. Pour ce faire, j’ai moi-même reçu des cours lors de ma formation à In’tech sur ce sujet qui m’ont été très utile. J’ai aussi dû m’auto-former sur le e-commerce ainsi que ses nombreux termes techniques (ligne de flottaison, fil d’Ariane, etc.).
+                        Pour cette compétence, j’ai dû apprendre comment donner un cours de manière intéressante et pertinente. Pour ce faire, j’ai moi-même reçu des cours lors de ma formation à IN’TECH sur ce sujet qui m’ont été très utile. J’ai aussi dû m’auto-former sur le e-commerce ainsi que ses nombreux termes techniques (ligne de flottaison, fil d’Ariane, etc.).
 
                     </p>
                     <h3 class="modal-title">Réalisation</h3>
                     <p class="modal-text">
-                        Lors de cette formation nous avons donné cours aux élèves de la MFR de Castelmoron-sur-Lot en tant que groupe de 4 dont j’étais le chef de projet, cette classe de seconde TCVA (Technicien Conseil Vente en Alimentation) a dans son programme une section complète sur la vente en ligne et l’e-commerce. Nous avons donc vu les différentes terminologies utilisées, quelques exemples et pour finir un atelier pratique ou les élèves ont pu réaliser leurs propres sites de vente via Wix. Pour conclure nos cours nous avions réalisé une évaluation complète traitant de tous les sujets en deux parties : la première théorique, la deuxième pratique. Cette dernière avait la même consigne que l’exercice de plus tôt, avec la différence d’être noté par rapport à l’utilisation intelligente des différentes méthodes permettant d’optimiser la vente et le trafic sur le site web vue durant les cours théoriques.
-                        L’entièreté de cette formation s’est déroulée sur 4 mois et c'est terminé avec <a class="link" href="https://www.sudouest.fr/lot-et-garonne/castelmoron-sur-lot/les-eleves-de-l-intech-a-la-mfr-2738311.php" target="_blank">un article du sud-ouest</a> sur notre interaction avec la MFR de Castelmoron-sur-Lot
+                        Lors de cette formation, nous avons donné cours aux élèves de la MFR de Castelmoron-sur-Lot en tant que groupe de 4 dont j’étais le chef de projet, cette classe de seconde TCVA (Technicien Conseil Vente en Alimentation) a dans son programme une section complète sur la vente en ligne et l’e-commerce. Nous avons donc vu les différentes terminologies utilisées, quelques exemples et pour finir un atelier pratique ou les élèves ont pu réaliser leurs propres sites de vente via Wix. Pour conclure nos cours, nous avions réalisé une évaluation complète traitant de tous les sujets en deux parties : la première théorique, la deuxième pratique. Cette dernière avait la même consigne que l’exercice de plus tôt, avec la différence d’être noté par rapport à l’utilisation intelligente des différentes méthodes permettant d’optimiser la vente et le trafic sur le site web vue durant les cours théoriques. 
+                        L’entièreté de cette formation s’est déroulée sur 4 mois et c'est terminé avec <a class="link" href="https://www.sudouest.fr/lot-et-garonne/castelmoron-sur-lot/les-eleves-de-l-intech-a-la-mfr-2738311.php" target="_blank">un article du sud-ouest</a> sur notre interaction avec la MFR de Castelmoron-sur-Lot.
+                        
                     </p>
                     <h3 class="modal-title">Expérience & Recul sur la compétence</h3>
                     <p class="modal-text">
-                        J’ai beaucoup appris sur cette période, notamment les différentes difficultés de l’enseignement (la pédagogie, l’écoute des élèves, les comportements difficiles, etc.). Même s’il me reste encore beaucoup à apprendre, je pense être viable comme formateur si j’ai suffisamment de temps pour préparer mon cours et mes recherches. Je souhaiterai rajouter que j’aimerai beaucoup travailler dans le domaine de l’enseignement ou de la formation plus tard.
+                        J’ai beaucoup appris sur cette période, notamment les différentes difficultés de l’enseignement (la pédagogie, l’écoute des élèves, les comportements difficiles, etc.). Même s’il me reste encore beaucoup à apprendre, je pense être viable comme formateur si j’ai suffisamment de temps pour préparer mon cours et mes recherches. Je souhaiterais rajouter que j’aimerais beaucoup travailler dans le domaine de l’enseignement ou de la formation plus tard.
 
                     </p>
                 </div>
@@ -930,16 +1028,14 @@
                         <div>
                             <h1 class="modal-title">Agile scrum & Organisation</h1>
                             <p class="modal-text">
-                                Tout au long de mes études ainsi que dans mon travail, je considère l’organisation comme la clef du succès. 
-                                Pour ce faire, j’utilise de nombreux outils : personas, diagramme de gantt, matrice de risque mais principalement la méthode agile. 
-                                Celle-ci est une méthodologie de gestion de projet très connues et utilisé dans les entreprises. 
-                                Elle consiste une approche par petite itération plutôt que tout d’un coup. 
-                                Pour ce faire, le projet est découpé en petite partie appelé « User stories », chacune représentant un besoin d’utilisateur (exemple : En tant qu’utilisateur, je veux pouvoir envoyer des messages). 
-                                Ces user stories seront donc ensuite développer sur une durée déterminée qui peut varier selon l’entreprise (1 semaine par exemple). 
-                                La particularité de la version scrum est la recentralisation du projet autour du client. 
-                                Celui-ci est en contact direct et constant avec la personne appelé le « Scrum master », qui se charge ensuite de faire passer les informations importantes au reste de l’équipe. 
-                                C’est actuellement une méthodologie de plus en plus utilisée par les entreprises du monde moderne (Orange, Spotify, et bien d’autres encore).
+                                Tout au long de mes études ainsi que dans mon travail, je considère l’organisation comme la clef du succès. Pour ce faire, j’utilise de nombreux outils : personas, diagramme de gantt, matrice de risque, mais principalement la méthode agile. Celle-ci est une méthodologie de gestion de projet très connue et utilisé dans les entreprises. Elle consiste en une approche par petite itération plutôt que tout d’un coup. Pour ce faire, le projet est découpé en petite partie appelée « User stories », chacune représentant un besoin d’utilisateur (exemple : En tant qu’utilisateur, je veux pouvoir envoyer des messages). Ces user stories seront donc ensuite développer sur une durée déterminée qui peut varier selon l’entreprise (1 semaine par exemple). La particularité de la version scrum est la recentralisation du projet autour du client. Celui-ci est en contact direct et constant avec la personne appelé le « Scrum master », qui se charge ensuite de faire passer les informations importantes au reste de l’équipe. C’est actuellement une méthodologie de plus en plus utilisée par les entreprises du monde moderne (Orange, Spotify, et bien d’autres encore).
 
+                            </p>
+
+                            <br /><p class="modal-text">
+                                Réalisations relatives à la compétence :
+                                <u><a class="UPSACALENDAR">UPSA Calendar</a></u>,
+                                <u><a class="MCUSYS">McuSys</a></u>.
                             </p>
                         </div>
                         <div>
@@ -953,19 +1049,15 @@
                 <div class="col-2">
                     <h3 class="modal-title">Formation</h3>
                     <p class="modal-text">
-                        J’ai appris les bases de cette méthodologie en cours dans l’établissement d’enseignement supérieur IN’TECH. J’ai ensuite utilisé cette méthode lors de nombreux projet informatique dans cette même école, pour finalement exécuter celle-ci dans un environnement de travail réel : ma société actuelle, Agriware. J’ai appris les à me server des autres outils lors de formations avec M. Malacrino, lors de diverses cas pratique montrant la puissance des ces outils et méthodes d’organisation.
+                        J’ai appris les bases de cette méthodologie en cours dans l’établissement d’enseignement supérieur IN’TECH. J’ai ensuite utilisé cette méthode lors de nombreux projets informatique dans cette même école, pour finalement exécuter celle-ci dans un environnement de travail réel : ma société actuelle, Agriware. J’ai appris à me servir des autres outils durant les formations avec M. Malacrino, lors de diverses cas pratique montrant la puissance de ces outils et méthodes d’organisation.
                     </p>
                     <h3 class="modal-title">Réalisation</h3>
                     <p class="modal-text">
-                        C’est avec et grâce a la méthode agile scrum que j’ai pu réaliser chacun des projets de la partie réalisation. 
-                        En effet, j’ai utilisé cette méthode et ces différents outils d’organisations (personas, gantt, tableau kanban, etc.) pour préparer en amont le projet
-                        (quel sont les utilisateurs types ? un tel produit les intéresserait-il ? quel changement améliorera leurs perceptions de ce produit ?) afin d’éliminer le maximum de risque possibles.
-                        Ces différents outils ne sont pas restreints au projet technologique, mais peuvent être utilisés dans des projets humains comme dans la vie de tous les jours !
+                        C’est avec et grâce à la méthode agile scrum que j’ai pu réaliser chacun des projets de la partie réalisation. En effet, j’ai utilisé cette méthode et ces différents outils d’organisations (personas, gantt, tableau kanban, etc.) pour préparer en amont le projet (quel sont les utilisateurs type ? un tel produit les intéresserait-il ? quels changements amélioreront leurs perceptions de ce produit ?) afin d’éliminer le maximum de risques possibles. Ces différents outils ne sont pas restreints au projet technologique, mais peuvent être utilisés dans des projets humains comme dans la vie de tous les jours !
                     </p>
                     <h3 class="modal-title">Expérience & Recul sur la compétence</h3>
                     <p class="modal-text">
-                        Comme beaucoup de personnes, j’avais tendance à douté de la puissance de ces outils et méthodologie, pensant qu’ils prendraient trop de temps sur le projet en lui-même. Mais je peux désormais vous affirmer que la réussite d’un projet passe par une phase de conception et d’organisation bien plus longue que la phase de réalisation. 
-                        Avec du recul, je dois vous avouer que j’aurai souhaité découvrir et apprendre ces différentes choses bien plus tôt, car ce sont elles qui m’ont permis d’être là où je suis actuellement.
+                        Comme beaucoup de personnes, j’avais tendance à douter de la puissance de ces outils et méthodologie, pensant qu’ils prendraient trop de temps sur le projet en lui-même. Mais je peux désormais vous affirmer que la réussite d’un projet passe par une phase de conception et d’organisation bien plus longue que la phase de réalisation. Avec du recul, je dois vous avouer que j’aurai souhaité découvrir et apprendre ces différentes choses bien plus tôt, car ce sont elles qui m’ont permis d’être là où je suis actuellement.
                     </p>
                 </div>
             </div>
@@ -981,17 +1073,12 @@
                         <div>
                             <h1 class="modal-title">Veille technologique</h1>
                             <p class="modal-text">
-                                La veille technologique consiste en une combinaison de système mis en place pour rester à jour sur les technologies connues et utilisé selon certains critères.
-                                La veille est utilisée dans de très nombreux domaines, que ce soit l’informatique (alors appelée "veille technologique"), mais aussi la finance, ou bien encore l’immobilier.
-                                Grace à la veille technologique, ont peu se tenir à jour des changement important et relatifs aux technologies que l’ont utilisé, comme par exemple une nouvelle version d’un ancien outil, ou même un nouvel outil remplaçant une solution qui n’est plus au gout du jour.
-                                Les 5 étapes qui la composent sont :
-                                le ciblage (ou l’on définit les termes de nos recherche),
-                                la collecte et recherche (on utilise des moteurs et méta-moteurs de recherche combiné avec le résultat de notre ciblage),
-                                la veille en elle-même (on utilise des signets, des flux rss, etc. pour suivre l’évolution des résultat trouvé),
-                                l’analyse des résultat (on organise et on tri ceux-ci, au travers d’un Excel par exemple),
-                                et enfin on diffuse ceux-ci au parti intéressé. La veille technologie n’est pas une méthodologie, mais une attention de tout instant permettant ainsi de se maintenir à jour sur certains sujet précis.
-                                Il est important de noter que c’est quelque chose que l’ont peu intégré dans sa vie de tous les jours, par exemple en regardant les news et articles sur certaines technologie tout en buvant son café du matin.
-                                Pour ce faire, nous disposons de nombreux outils : flux rss, newsletter, forums, dashbords, etc.
+                                La veille technologique consiste en une combinaison de système mis en place pour rester à jour sur les technologies connues et utilisé selon certains critères. La veille est utilisée dans de très nombreux domaines, que ce soit l’informatique (alors appelée veille technologique), mais aussi la finance, ou bien encore l’immobilier. Grâce à la veille technologique, ont peu se tenir à jour des changement important et relatif aux technologies que l’on utilise, comme par exemple une nouvelle version d’un ancien outil, ou même un nouvel outil remplaçant une solution qui n’est plus au goût du jour. Les 5 étapes qui la composent sont : le ciblage (ou l’on définit les termes de nos recherches), la collecte et recherche (on utilise des moteurs et méta-moteurs de recherche combinés avec le résultat de notre ciblage), la veille en elle-même (on utilise des signets, des flux rss, etc. pour suivre l’évolution des résultats trouvés), l’analyse des résultat (on organise et on tri ceux-ci, au travers d’un Excel par exemple), et enfin, on diffuse ceux-ci aux parties intéressées. La veille technologique n’est pas une méthodologie, mais une attention de tout instant permettant ainsi de se maintenir à jour sur certains sujets précis. Il est important de noter que c’est quelque chose que l’on peut intégrer dans sa vie de tous les jours, par exemple en regardant les news et articles sur certaines technologies tout en buvant son café du matin. Pour ce faire, nous disposons de nombreux outils : flux rss, newsletter, forums, dashbords, etc.
+                            </p>
+
+                            <br /><p class="modal-text">
+                                Réalisation relative à la compétence :
+                                <u><a class="UPSACALENDAR">UPSA Calendar</a></u>.
                             </p>
                         </div>
                         <div>
@@ -1005,25 +1092,16 @@
                 <div class="col-2">
                     <h3 class="modal-title">Formation</h3>
                     <p class="modal-text">
-                        J’ai découvert et utilisé le principe de veille technologique lors de mon semestre 7, durant lequel j’ai procédé à une veille technologique centré sur le sujet des outils de télétravail. 
-                        Durant celui-ci, j’ai appris à créer une mindmap selon nos besoins, la réalisation d’un tableau de mots-clefs, celui-ci permettant de recenser les différents termes que nous utiliserons lors de nos recherches, trouver des sites possédant des sources fiables, ainsi que plein d’autres choses comme par exemple la gestion d’un flux rss avec un dashboard.
+                        J’ai découvert et utilisé le principe de veille technologique lors de mon semestre 7, durant lequel j’ai procédé à une veille technologique centrée sur le sujet des outils de télétravail. Durant celui-ci, j’ai appris à créer une mindmap selon nos besoins, la réalisation d’un tableau de mots-clefs, celui-ci permettant de recenser les différents termes que nous utiliserons lors de nos recherches, trouver des sites possédant des sources fiables, ainsi que plein d’autres choses comme par exemple la gestion d’un flux rss avec un dashboard.
                     </p>
                     <h3 class="modal-title">Réalisation</h3>
                     <p class="modal-text">
-                        Lors de cette veille technologique, nous avons cherché les nouveaux outils de télétravail pouvant nous servir lors de la quarantaine du COVID-19. 
-                        Pour ce faire, nous avions tout d’abord réalisé une mindmap contenant tous les outils que nous connaissions. 
-                        Ensuite, nous avons établi une liste de chaque mot lié à de possibles recherchent (messages, appels, sécurisé, gratuit, téléphone, etc.). 
-                        Nous avons ensuite combiné ces différents mot et termes afin d’avoir des résultats de recherche le plus proche de nos besoins. 
-                        Une fois cela fait, nous avons trié les résultat obtenu et réalisé une liste de tous nos outils obtenus, que nous avons analysé afin de ne garder que les plus performants selon nos critères.
+                        Lors de cette veille technologique, nous avons cherché les nouveaux outils de télétravail pouvant nous servir lors de la quarantaine du COVID-19. Pour ce faire, nous avions tout d’abord réalisé une mindmap contenant tous les outils que nous connaissions. Ensuite, nous avons établi une liste de chaque mot lié à de possibles recherchent (messages, appels, sécurisé, gratuit, téléphone, etc.). Nous avons ensuite combiné ces différents mots et termes afin d’avoir des résultats de recherche le plus proche de nos besoins. Une fois cela fait, nous avons trié les résultats obtenus et réalisés une liste de tous nos outils obtenus, que nous avons analysé afin de ne garder que les plus performants selon nos critères.
                     </p>
                     <h3 class="modal-title">Expérience & Recul sur la compétence</h3>
                     <p class="modal-text">
-                        Auparavant, je douté fortement de l’utilité de la chose.
-                        Cependant, après m’en être servi, je me suis rendu compte de quelque chose : nous faisons de la veille en permanence dans notre vie de tous les jours.
-                        En effet, quelque qui regarde l’évolution de la bourse tout les soir fais en réalité de la veille, bien que celle-ci sera moins détaille.
-                        Il observera l’évolution au travers de différentes sources, établira lui-même une décision de ou placer ses prochains investissements, tout en s’assurant que ceux qu’il a déjà placé continue à fructifier.
-                        Ainsi, on peut clairement reconnaitre un paterne : il fait des recherches, selon des mots clef qu’il connais, compare les différents résultats et leurs sources, pour au final se tenir au courant de l’évolution du marché en détail.
-                        C’est ça, la puissance de la veille. Elle est présente partout, et m’est particulièrement utile en tant qu’expert en développement logiciel car elle me permet d’être toujours a la pointe des nouvelles technologies.
+                        Auparavant, je doutais fortement de l’utilité de la chose. Cependant, après m’en être servi, je me suis rendu compte de quelque chose : nous faisons de la veille en permanence dans notre vie de tous les jours. En effet, quelqu’un qui regarde l’évolution de la bourse tous les soirs fait en réalité de la veille, bien que celle-ci sera moins détaillé. Il observera l’évolution au travers de différentes sources, établira lui-même une décision d’où placer ses prochains investissements, tout en s’assurant que ceux qu’il a déjà placé continuent à fructifier. Ainsi, on peut clairement reconnaître un paterne : il fait des recherches, selon des mots-clefs qu’il connaît, compare les différents résultats et leurs sources, pour au final se tenir au courant de l’évolution du marché en détail.
+                        C’est ça, la puissance de la veille. Elle est présente partout, et m’est particulièrement utile en tant qu’expert en développement logiciel, car elle me permet d’être toujours à la pointe des nouvelles technologies.
                     </p>
                 </div>
             </div>
@@ -1039,12 +1117,14 @@
                         <div>
                             <h1 class="modal-title">Polyvalence</h1>
                             <p class="modal-text">
-                                Être polyvalent est une véritable compétence a part entière depuis quelques années. 
-                                La polyvalence ce n’est pas juste une capacité à utiliser plusieurs langages de développement, ou la capacité a réalisé un projet seul. 
-                                De nos jours, être polyvalent est de plus en plus recherché. 
-                                Par exemple, les personnes se qualifiant de « développeur full stack » sont très polyvalentes dans leurs domaines, ce qui leurs permets ainsi de se démarquer des autres candidats. 
-                                Ma polyvalence, c’est le fait d’être capable de dialoguer en anglais de manière fluide, de pouvoir organiser des évènements, de savoir gérer un budget de manière professionnel, et bien d'autres choses encore.
+                                Être polyvalent est une véritable compétence à part entière depuis quelques années. La polyvalence ce n’est pas juste une capacité à utiliser plusieurs langages de développement, ou la capacité a réalisé un projet seul. De nos jours, être polyvalent est de plus en plus recherché. Par exemple, les personnes se qualifiant de « développeur full stack » sont très polyvalentes dans leurs domaines, ce qui leur permet ainsi de se démarquer des autres candidats. Ma polyvalence, c’est le fait d’être capable de dialoguer en anglais de manière fluide, de pouvoir organiser des événements, de savoir gérer un budget de manière professionnelle, et bien d'autres choses encore.
 
+                            </p>
+
+                            <br /><p class="modal-text">
+                                Réalisations relatives à la compétence :
+                                <u><a class="MOBISCORE">Mobiscore</a></u>,
+                                <u><a class="EPICERIE">E-picerie</a></u>.
                             </p>
                         </div>
                         <div>
@@ -1058,30 +1138,18 @@
                 <div class="col-2">
                     <h3 class="modal-title">Formation</h3>
                     <p class="modal-text">
-                        Devenir polyvalent est une formation de chaque instant.  
-                        J’ai commencé à le devenir lors de mes études, lorsque j’ai commencé l’école IN’TECH. 
-                        En effet, devoir réaliser de multiples projets par ans nous forcent à devenir plus performants, plus multi-tâche, plus polyvalent. 
-                        Ainsi, j’ai appris de nombreuses choses : les bases du droit en France, la gestion de budget, la création d’entreprises, ainsi que des langages informatiques qui n’était même pas à notre programme.
-                        C’est cette capacité d’apprentissage, d’adaptation qui m’a permis de rédiger ces articles, et c’est peut-être elle qui vous fera me contacter.
+                        Devenir polyvalent est une formation de chaque instant.  J’ai commencé à le devenir lors de mes études, lorsque j’ai commencé l’école IN’TECH. En effet, devoir réaliser de multiples projets par an nous forcent à devenir plus performants, plus multi-tâche, plus polyvalent. Ainsi, j’ai appris de nombreuses choses : les bases du droit Français, la gestion de budget, la création d’entreprises, ainsi que des langages informatiques qui n’était même pas à notre programme. C’est cette capacité d’apprentissage, d’adaptation qui m’a permis de rédiger ces articles, et c’est peut-être elle qui vous fera me contacter.
 
                     </p>
                     <h3 class="modal-title">Réalisation</h3>
                     <p class="modal-text">
-                        Grace à cette polyvalence, j’ai réalisé de nombreux projets. 
-                        En effet, la réussite de mon projet de semestre 4 n’est arrivé que parce que j’ai su m’adapter au différentes demandes et besoin, en apprenant un langage que je ne savais pas. 
-                        C’est aussi cette polyvalence qui m’a permis d’être trésorier lors du téléthon d’Agen en automne 2019 en compagnie <a class="link" target="_blank"  href="https://alexandre-nicolle.vercel.app/#/home">d’Alexandre Nicolle</a>. 
-                        Téléthon qui a d’ailleurs réussis a levé la somme de 1631€. 
-                        De même, c’est cette polyvalence qui m’a permis de réaliser et d’apprendre de nombreuses choses durant mon parcours professionnel, notamment en me permettant de mettre en place des solutions au différents problèmes que j’ai pu rencontrer 
-                        (facilité la traduction en mettant en place une solution d’édition en ligne, avec un outil que je ne connaissais pas, réaliser un outil permettant ensuite de faire gagner du temps au développeur cherchant à ensuite importer ou exporter leurs traductions).
+                        Grâce à cette polyvalence, j’ai réalisé de nombreux projets. En effet, la réussite de mon projet de semestre 4 n’est arrivé que parce que j’ai su m’adapter aux différentes demandes et besoins, en apprenant un langage que je ne savais pas. C’est aussi cette polyvalence qui m’a permis d’être trésorier lors du téléthon d’Agen en automne 2019 en compagnie d’<a class="link" target="_blank" href="https://alexandre-nicolle.vercel.app/#/home">Alexandre Nicolle</a>. Téléthon qui a d’ailleurs réussi a levé la somme de 1 631 €. De même, c’est cette polyvalence qui m’a permis de réaliser et d’apprendre de nombreuses choses durant mon parcours professionnel, notamment en me permettant de mettre en place des solutions aux différents problèmes que j’ai pu rencontrer (facilité la traduction en mettant en place une solution d’édition en ligne, avec un outil que je ne connaissais pas, réaliser un outil permettant ensuite de faire gagner du temps au développeur cherchant à ensuite importer ou exporter leurs traductions).
+                        
 
                     </p>
                     <h3 class="modal-title">Expérience & Recul sur la compétence</h3>
                     <p class="modal-text">
-                        Je pense que ce sont nos expériences qui nous forgent et font de nous ce que nous sommes. 
-                        Aussi, c’est à travers ce que j’ai vécu que je peux désormais me déclarer comme étant quelqu’un de très polyvalent. 
-                        Que ce soit au travers de mes réalisations (Téléthon, projets scolaire, professionnels, personnels) 
-                        ou bien de mes capacité (980/990 au Toeic, connaissance dans 7 langages ainsi que plusieurs framework) je suis confiant dans mes capacités et je pensent pouvoir encore m’améliorer, 
-                        afin d’atteindre les demandes les plus poussés des recruteurs.
+                        Je pense que ce sont nos expériences qui nous forgent et font de nous ce que nous sommes. Aussi, c’est à travers ce que j’ai vécu que je peux désormais me déclarer comme étant quelqu’un de très polyvalent. Que ce soit au travers de mes réalisations (Téléthon, projets scolaire, professionnels, personnels) ou bien de mes capacité (980/990 au Toeic, connaissance dans 7 langages ainsi que plusieurs framework) je suis confiant dans mes capacités et je pense pouvoir encore m’améliorer, afin d’atteindre les demandes les plus poussées des recruteurs.
 
                     </p>
                 </div>

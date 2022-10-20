@@ -58,3 +58,15 @@ if (currentTheme) {
     toggleSwitch.checked = true;
   }
 }
+
+//workaround for z-index problem
+var tooltip_bottom = document.querySelectorAll(".tooltip-bottom-container")
+var arrows = document.querySelectorAll(".arrows")
+for (i = 0; i < tooltip_bottom.length; i++) {
+    tooltip_bottom[i].addEventListener('mouseenter', function () {
+        arrows[0].classList.add('hide');
+    });
+    tooltip_bottom[i].addEventListener('mouseleave', function () {
+        arrows[0].classList.remove('hide');
+    });
+}

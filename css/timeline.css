@@ -6,6 +6,11 @@
 .timeline {
     white-space: nowrap;
     overflow-x: hidden;
+    overflow-y: visible;
+    margin-top: -200px !important; /* width of blue box */
+    padding-top: 200px;
+    margin-bottom: -100px !important; /* width of blue box */
+    padding-bottom: 100px;
 }
 
     .timeline ol {
@@ -25,7 +30,12 @@
         }
 
             .timeline ol li:last-child {
-                width: 280px;
+                width: 300px;
+                height: 3px;
+                background-image: linear-gradient(90deg, var(--bg-secondary), var(--bg-secondary) 75%, transparent 75%, transparent 100%) !important;
+                background-size: 20px 1px !important;
+                border: none;
+                background: none;
             }
 
             .timeline ol li:not(:first-child) {
@@ -43,6 +53,7 @@
                 transform: translateY(-50%);
                 border-radius: 50%;
                 background: var(--secondary-color);
+                overflow:hidden;
             }
 
             .timeline ol li div {
@@ -52,19 +63,24 @@
                 padding: 15px;
                 font-size: 1rem;
                 white-space: normal;
-                color: black;
-                background: white;
-                box-shadow: 0 0 14px -5px var(--bg-secondary);
+                color: var(--text-color);
+                background: var(--bg-primary);
+                box-shadow: 0 0 10px -5px var(--bg-secondary);
+                border-radius: 8px;
             }
 
                 .timeline ol li div::before {
                     content: '';
                     position: absolute;
                     top: 100%;
-                    left: 0;
-                    width: 0;
-                    height: 0;
+                    left: 10%;
+                    width: 5px;
+                    height: 5px;
+                    z-index: -1;
+                    transform: translate(-50%,-50%) rotate(45deg);
+                    background-color: #FFFFFF;
                     border-style: solid;
+                    box-shadow: 0 0 10px -5px var(--bg-secondary);
                 }
 
             .timeline ol li:nth-child(odd) div {
@@ -75,7 +91,7 @@
                 .timeline ol li:nth-child(odd) div::before {
                     top: 100%;
                     border-width: 8px 8px 0 0;
-                    border-color: white transparent transparent transparent;
+                    border-color: var(--bg-primary) transparent transparent transparent;
                 }
 
             .timeline ol li:nth-child(even) div {
@@ -83,9 +99,9 @@
             }
 
                 .timeline ol li:nth-child(even) div::before {
-                    top: -8px;
+                    top: 0px;
                     border-width: 8px 0 0 8px;
-                    border-color: transparent transparent transparent white;
+                    border-color: transparent transparent transparent var(--bg-primary);
                 }
 
     .timeline time {
@@ -103,13 +119,14 @@
         display: flex;
         justify-content: center;
         margin-bottom: 20px;
+        position: relative;
     }
 
     .arrow.button-timeline {
         display: flex;
         justify-content: center;
         margin-bottom: 20px;
-        box-shadow: 0 0 14px -5px var(--bg-secondary);
+        box-shadow: 0 0 10px -5px var(--bg-secondary);
         border-radius: 100%;
         width: 50px;
         height: 50px;
@@ -156,6 +173,21 @@
                 margin-left: auto;
             }
 
+            .timeline ol li:last-child {
+                height: 3px;
+                background-image: linear-gradient(90deg, var(--bg-secondary), var(--bg-secondary) 75%, transparent 75%, transparent 100%) !important;
+                background-size: 20px 1px !important;
+                border: none;
+                background: none;
+                left: 50%;
+                top: 100%;
+                transform: translateX(-50%);
+                border: none;
+                border-left: 1px dotted var(--bg-secondary);
+                height: 40px;
+            }
+
+
             .timeline ol li div {
                 width: 94%;
                 height: auto !important;
@@ -176,7 +208,7 @@
                     top: 100%;
                     transform: translateX(-50%);
                     border: none;
-                    border-left: 1px solid white;
+                    border-left: 1px solid var(--bg-secondary);
                     height: 25px;
                 }
 

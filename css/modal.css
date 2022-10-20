@@ -132,12 +132,14 @@ html, body {
 }
 
 .col-1 {
-    grid-column-start:1;
-    grid-column-end:2;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    margin-right: 0.75rem;
 }
 .col-2 {
     grid-column-start: 2;
-    grid-column-end: end;
+    grid-column-end: 3;
+    margin-left: 0.75rem;
 }
 
 @media (max-width:  1200px) {

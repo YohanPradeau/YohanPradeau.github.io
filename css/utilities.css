@@ -39,6 +39,8 @@ h2::selection {
   color: var(--bg-primary);
 }
 
+
+
 /* add hover to resume button */
 .btn-primary:hover {
   background: var(--secondary-color);
@@ -158,14 +160,14 @@ div#NETSYS.card {
     background: url(../assets/projects/no-icon.png) center center/cover;
 }
 
-/* VSTT */
-div#VSTT.card {
-    background: url(../assets/projects/no-icon.png) center center/cover;
+/* MOBISCORE */
+div#MOBISCORE.card {
+    background: url(../assets/projects/mobiscore.png) center center/cover;
 }
 
 /* CHECKEAT */
-div#CHECKEAT.card {
-    background: url(../assets/projects/checkEat.png) center center/cover;
+div#EPICERIE.card {
+    background: url(../assets/projects/epicerie.png) center center/cover;
 }
 
 /* UPSA CALENDAR */
@@ -247,6 +249,12 @@ div#POLY.card {
   }
 }
 
+.down {
+    vertical-align: middle;
+    width:16px;
+    height:16px;
+}
+
 /* Animation Bonjour*/
 
 .first-part {
@@ -254,9 +262,16 @@ div#POLY.card {
     text-align: center;
 }
 
+@media(min-height:750px) {
+    .second-part-div {
+        height: 0px;
+        animation: reveal 7s forwards;
+    }
+}
+
 .second-part-div {
     height: 0px;
-    animation: reveal 7s forwards;
+    animation: reveal750 7s forwards;
 }
 
 .second-part {
@@ -316,6 +331,38 @@ div#POLY.card {
     100% {
         opacity: 1;
         height: 56px;
+    }
+}
+
+@keyframes reveal750 {
+    0% {
+        opacity: 0;
+        height: 0px;
+        margin-bottom: 0px;
+    }
+
+    20% {
+        opacity: 0;
+        height: 0px;
+        margin-bottom: 20px;
+    }
+
+    30% {
+        opacity: 0;
+        height: 56px;
+        margin-bottom: 40px;
+    }
+
+    50% {
+        opacity: 1;
+        height: 56px;
+        margin-bottom: 40px;
+    }
+
+    100% {
+        opacity: 1;
+        height: 56px;
+        margin-bottom: 40px;
     }
 }
 

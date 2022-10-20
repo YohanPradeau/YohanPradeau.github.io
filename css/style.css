@@ -117,8 +117,11 @@ body {
   background: var(--bg-primary);
 }
 
+.navbar li {
+    margin: 0 1rem;
+}
+
 .navbar .nav-link {
-  margin: 0 1rem;
   font-size: 0.8rem;
   font-weight: var(--weight-semibold);
 }
@@ -130,6 +133,10 @@ body {
 
 .navbar .btn {
   margin-right: 1.5rem;
+}
+
+.navbar .contact {
+    margin-right: 0 !important;
 }
 
 .fas.fa-arrow-right {
@@ -282,7 +289,7 @@ body {
 @media (max-width: 768px) {
 }
 
-@media (max-width: 670px) {
+@media (max-width: 1050px) {
   .navbar .nav-menu {
     position: fixed;
     right: -100vw;
@@ -356,3 +363,10 @@ body {
   }
 }
 
+.navbar-left {
+    display: flex
+}
+
+.hide {
+    z-index: -1 !important;
+}
