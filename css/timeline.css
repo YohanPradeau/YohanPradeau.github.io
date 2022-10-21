@@ -102,6 +102,7 @@
                     top: 0px;
                     border-width: 8px 0 0 8px;
                     border-color: transparent transparent transparent var(--bg-primary);
+                    z-index: 1;
                 }
 
     .timeline time {
@@ -205,11 +206,12 @@
                 .timeline ol li:nth-child(odd) div::before,
                 .timeline ol li:nth-child(even) div::before {
                     left: 50%;
-                    top: 100%;
+                    top: 75%;
                     transform: translateX(-50%);
                     border: none;
                     border-left: 1px solid var(--bg-secondary);
-                    height: 25px;
+                    height: 50px;
+                    z-index: -2;
                 }
 
             .timeline ol li:last-child,
@@ -218,4 +220,22 @@
             .timeline .arrows {
                 display: none;
             }
+}
+
+.header-timeline {
+    left: 0 !important;
+    top: 0 !important;
+    position: relative !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    background: none !important;
+    border-radius: 0 !important;
+    width: auto !important;
+    display: flex;
+    justify-content: space-between;
+    transform: none !important;
+}
+
+.timeline-link-image {
+    height:40px;
 }
