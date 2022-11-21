@@ -64,7 +64,7 @@
 }
 
 html {
-  font-size: 100%;
+  font-size: 110%;
   scroll-behavior: smooth;
 }
 
@@ -88,7 +88,7 @@ a {
 body {
   background: var(--bg-primary);
   color: var(--text-color);
-  font-family: "Raleway", sans-serif;
+  font-family: "Calibri", sans-serif;
   line-height: 1.5;
 }
 
@@ -313,7 +313,7 @@ body {
   }
 
   .nav-menu .nav-link {
-    font-size: 0.9rem;
+    font-size: rem;
     margin: 0 0.2rem;
   }
 

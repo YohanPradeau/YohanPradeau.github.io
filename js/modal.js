@@ -1,29 +1,29 @@
 ///PROJECT
-var MCUSYS = document.querySelectorAll(".MCUSYS")
+let MCUSYS = document.querySelectorAll(".MCUSYS")
 for (i = 0; i < MCUSYS.length; i++) {
     MCUSYS[i].addEventListener('click', function () {
         trigger_modal_show("MCUSYS")
     });
 }
-var NETSYS = document.querySelectorAll(".NETSYS")
+let NETSYS = document.querySelectorAll(".NETSYS")
 for (i = 0; i < NETSYS.length; i++) {
     NETSYS[i].addEventListener('click', function () {
         trigger_modal_show("NETSYS")
     });
 }
-var MOBISCORE = document.querySelectorAll(".MOBISCORE")
+let MOBISCORE = document.querySelectorAll(".MOBISCORE")
 for (i = 0; i < MOBISCORE.length; i++) {
     MOBISCORE[i].addEventListener('click', function () {
         trigger_modal_show("MOBISCORE")
     });
 }
-var UPSACALENDAR = document.querySelectorAll(".UPSACALENDAR")
+let UPSACALENDAR = document.querySelectorAll(".UPSACALENDAR")
 for (i = 0; i < UPSACALENDAR.length; i++) {
     UPSACALENDAR[i].addEventListener('click', function () {
         trigger_modal_show("UPSACALENDAR")
     });
 }
-var EPICERIE = document.querySelectorAll(".EPICERIE")
+let EPICERIE = document.querySelectorAll(".EPICERIE")
 for (i = 0; i < EPICERIE.length; i++) {
     EPICERIE[i].addEventListener('click', function () {
         trigger_modal_show("EPICERIE")
@@ -37,37 +37,37 @@ document.getElementById("modal-UPSACALENDAR").onclick = function () { trigger_mo
 document.getElementById("modal-EPICERIE").onclick = function () { trigger_modal_hide("EPICERIE") };
 
 //TECH
-var JS = document.querySelectorAll(".JS")
+let JS = document.querySelectorAll(".JS")
 for (i = 0; i < JS.length; i++) {
     JS[i].addEventListener('click', function () {
         trigger_modal_show("JS")
     });
 }
-var PHP = document.querySelectorAll(".PHP")
+let PHP = document.querySelectorAll(".PHP")
 for (i = 0; i < PHP.length; i++) {
     PHP[i].addEventListener('click', function () {
         trigger_modal_show("PHP")
     });
 }
-var PY = document.querySelectorAll(".PY")
+let PY = document.querySelectorAll(".PY")
 for (i = 0; i < PY.length; i++) {
     PY[i].addEventListener('click', function () {
         trigger_modal_show("PY")
     });
 }
-var WL = document.querySelectorAll(".WL")
+let WL = document.querySelectorAll(".WL")
 for (i = 0; i < WL.length; i++) {
     WL[i].addEventListener('click', function () {
         trigger_modal_show("WL")
     });
 }
-var JAVA = document.querySelectorAll(".JAVA")
+let JAVA = document.querySelectorAll(".JAVA")
 for (i = 0; i < JAVA.length; i++) {
     JAVA[i].addEventListener('click', function () {
         trigger_modal_show("JAVA")
     });
 }
-var CS = document.querySelectorAll(".CS")
+let CS = document.querySelectorAll(".CS")
 for (i = 0; i < CS.length; i++) {
     CS[i].addEventListener('click', function () {
         trigger_modal_show("CS")
@@ -82,25 +82,25 @@ document.getElementById("modal-JAVA").onclick = function () { trigger_modal_hide
 document.getElementById("modal-CS").onclick = function () { trigger_modal_hide("CS") };
 
 //TRANS
-var FORMATIONS = document.querySelectorAll(".FORMATIONS")
+let FORMATIONS = document.querySelectorAll(".FORMATIONS")
 for (i = 0; i < FORMATIONS.length; i++) {
     FORMATIONS[i].addEventListener('click', function () {
         trigger_modal_show("FORMATIONS")
     });
 }
-var AS = document.querySelectorAll(".AS")
+let AS = document.querySelectorAll(".AS")
 for (i = 0; i < AS.length; i++) {
     AS[i].addEventListener('click', function () {
         trigger_modal_show("AS")
     });
 }
-var VT = document.querySelectorAll(".VT")
+let VT = document.querySelectorAll(".VT")
 for (i = 0; i < VT.length; i++) {
     VT[i].addEventListener('click', function () {
         trigger_modal_show("VT")
     });
 }
-var POLY = document.querySelectorAll(".POLY")
+let POLY = document.querySelectorAll(".POLY")
 for (i = 0; i < POLY.length; i++) {
     POLY[i].addEventListener('click', function () {
         trigger_modal_show("POLY")
