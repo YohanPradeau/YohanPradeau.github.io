@@ -82,10 +82,10 @@ document.getElementById("modal-JAVA").onclick = function () { trigger_modal_hide
 document.getElementById("modal-CS").onclick = function () { trigger_modal_hide("CS") };
 
 //TRANS
-let FORMATIONS = document.querySelectorAll(".FORMATIONS")
-for (i = 0; i < FORMATIONS.length; i++) {
-    FORMATIONS[i].addEventListener('click', function () {
-        trigger_modal_show("FORMATIONS")
+let COMMUNICATION = document.querySelectorAll(".COMMUNICATION")
+for (i = 0; i < COMMUNICATION.length; i++) {
+    COMMUNICATION[i].addEventListener('click', function () {
+        trigger_modal_show("COMMUNICATION")
     });
 }
 let AS = document.querySelectorAll(".AS")
@@ -107,7 +107,7 @@ for (i = 0; i < POLY.length; i++) {
     });
 }
 
-document.getElementById("modal-FORMATIONS").onclick = function () { trigger_modal_hide("FORMATIONS") };
+document.getElementById("modal-COMMUNICATION").onclick = function () { trigger_modal_hide("COMMUNICATION") };
 document.getElementById("modal-AS").onclick = function () { trigger_modal_hide("AS") };
 document.getElementById("modal-VT").onclick = function () { trigger_modal_hide("VT") };
 document.getElementById("modal-POLY").onclick = function () { trigger_modal_hide("POLY") };

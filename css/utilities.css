@@ -209,9 +209,9 @@ div#CS.card {
 
 
 /*comp*/
-/* FORMATIONS */
-div#FORMATIONS.card {
-    background: url(../assets/trans/formations.png) center center/cover;
+/* COMMUNICATION */
+div#COMMUNICATION.card {
+    background: url(../assets/trans/communication.png) center center/cover;
 }
 
 /* AGILE - SCRUM */
